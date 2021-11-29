@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AppbannuocModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="IdHoadon" />
+          </Key>
+          <Property Name="IdHoadon" Type="int" Nullable="false" />
+          <Property Name="IdNuoc" Type="int" />
+          <Property Name="NgayLap" Type="date" />
+          <Property Name="IdNhanvien" Type="int" />
+          <Property Name="Thanhtien" Type="float" />
+        </EntityType>
+        <EntityType Name="NuocUong">
+          <Key>
+            <PropertyRef Name="IdNuoc" />
+          </Key>
+          <Property Name="IdNuoc" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenNuoc" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gia" Type="float" />
+          <Property Name="IdTheloai" Type="int" />
+          <Property Name="Hinhanh" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="IdNhanvien" />
+          </Key>
+          <Property Name="IdNhanvien" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Hoten" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySinh" Type="date" />
+          <Property Name="Gioitinh" Type="nvarchar" MaxLength="50" />
+          <Property Name="DienThoai" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="IdTK" />
+          </Key>
+          <Property Name="IdTK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Taikhoan" Type="varchar" MaxLength="50" />
+          <Property Name="Matkhau" Type="varchar" MaxLength="50" />
+          <Property Name="Chucvu" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TheLoai">
+          <Key>
+            <PropertyRef Name="IdTheloai" />
+          </Key>
+          <Property Name="IdTheloai" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tentheloai" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_HoaDon_NuocUong">
+          <End Role="NuocUong" Type="Self.NuocUong" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NuocUong">
+              <PropertyRef Name="IdNuoc" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdNuoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="IdNhanvien" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdNhanvien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NuocUong_TheLoai">
+          <End Role="TheLoai" Type="Self.TheLoai" Multiplicity="0..1" />
+          <End Role="NuocUong" Type="Self.NuocUong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TheLoai">
+              <PropertyRef Name="IdTheloai" />
+            </Principal>
+            <Dependent Role="NuocUong">
+              <PropertyRef Name="IdTheloai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AppbannuocModelStoreContainer">
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NuocUong" EntityType="Self.NuocUong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TheLoai" EntityType="Self.TheLoai" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_HoaDon_NuocUong" Association="Self.FK_HoaDon_NuocUong">
+            <End Role="NuocUong" EntitySet="NuocUong" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NuocUong_TheLoai" Association="Self.FK_NuocUong_TheLoai">
+            <End Role="TheLoai" EntitySet="TheLoai" />
+            <End Role="NuocUong" EntitySet="NuocUong" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AppbannuocModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="IdHoadon" />
+          </Key>
+          <Property Name="IdHoadon" Type="Int32" Nullable="false" />
+          <Property Name="IdNuoc" Type="Int32" />
+          <Property Name="NgayLap" Type="DateTime" Precision="0" />
+          <Property Name="IdNhanvien" Type="Int32" />
+          <Property Name="Thanhtien" Type="Double" />
+          <NavigationProperty Name="NuocUong" Relationship="Self.FK_HoaDon_NuocUong" FromRole="HoaDon" ToRole="NuocUong" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="NuocUong">
+          <Key>
+            <PropertyRef Name="IdNuoc" />
+          </Key>
+          <Property Name="IdNuoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNuoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gia" Type="Double" />
+          <Property Name="IdTheloai" Type="Int32" />
+          <Property Name="Hinhanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HoaDon" Relationship="Self.FK_HoaDon_NuocUong" FromRole="NuocUong" ToRole="HoaDon" />
+          <NavigationProperty Name="TheLoai" Relationship="Self.FK_NuocUong_TheLoai" FromRole="NuocUong" ToRole="TheLoai" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="IdNhanvien" />
+          </Key>
+          <Property Name="IdNhanvien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Hoten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="Gioitinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HoaDon" Relationship="Self.FK_HoaDon_NhanVien" FromRole="NhanVien" ToRole="HoaDon" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="IdTK" />
+          </Key>
+          <Property Name="IdTK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Taikhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Matkhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Chucvu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TheLoai">
+          <Key>
+            <PropertyRef Name="IdTheloai" />
+          </Key>
+          <Property Name="IdTheloai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tentheloai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NuocUong" Relationship="Self.FK_NuocUong_TheLoai" FromRole="TheLoai" ToRole="NuocUong" />
+        </EntityType>
+        <Association Name="FK_HoaDon_NuocUong">
+          <End Role="NuocUong" Type="Self.NuocUong" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NuocUong">
+              <PropertyRef Name="IdNuoc" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdNuoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="IdNhanvien" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdNhanvien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NuocUong_TheLoai">
+          <End Role="TheLoai" Type="Self.TheLoai" Multiplicity="0..1" />
+          <End Role="NuocUong" Type="Self.NuocUong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TheLoai">
+              <PropertyRef Name="IdTheloai" />
+            </Principal>
+            <Dependent Role="NuocUong">
+              <PropertyRef Name="IdTheloai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AppbannuocEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" />
+          <EntitySet Name="NuocUong" EntityType="Self.NuocUong" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" />
+          <EntitySet Name="TheLoai" EntityType="Self.TheLoai" />
+          <AssociationSet Name="FK_HoaDon_NuocUong" Association="Self.FK_HoaDon_NuocUong">
+            <End Role="NuocUong" EntitySet="NuocUong" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NuocUong_TheLoai" Association="Self.FK_NuocUong_TheLoai">
+            <End Role="TheLoai" EntitySet="TheLoai" />
+            <End Role="NuocUong" EntitySet="NuocUong" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AppbannuocModelStoreContainer" CdmEntityContainer="AppbannuocEntities">
+          <EntitySetMapping Name="HoaDon">
+            <EntityTypeMapping TypeName="AppbannuocModel.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="IdHoadon" ColumnName="IdHoadon" />
+                <ScalarProperty Name="IdNuoc" ColumnName="IdNuoc" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="IdNhanvien" ColumnName="IdNhanvien" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NuocUong">
+            <EntityTypeMapping TypeName="AppbannuocModel.NuocUong">
+              <MappingFragment StoreEntitySet="NuocUong">
+                <ScalarProperty Name="IdNuoc" ColumnName="IdNuoc" />
+                <ScalarProperty Name="TenNuoc" ColumnName="TenNuoc" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="IdTheloai" ColumnName="IdTheloai" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhanVien">
+            <EntityTypeMapping TypeName="AppbannuocModel.NhanVien">
+              <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="IdNhanvien" ColumnName="IdNhanvien" />
+                <ScalarProperty Name="Hoten" ColumnName="Hoten" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="Gioitinh" ColumnName="Gioitinh" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoan">
+            <EntityTypeMapping TypeName="AppbannuocModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="IdTK" ColumnName="IdTK" />
+                <ScalarProperty Name="Taikhoan" ColumnName="Taikhoan" />
+                <ScalarProperty Name="Matkhau" ColumnName="Matkhau" />
+                <ScalarProperty Name="Chucvu" ColumnName="Chucvu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TheLoai">
+            <EntityTypeMapping TypeName="AppbannuocModel.TheLoai">
+              <MappingFragment StoreEntitySet="TheLoai">
+                <ScalarProperty Name="IdTheloai" ColumnName="IdTheloai" />
+                <ScalarProperty Name="Tentheloai" ColumnName="Tentheloai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
