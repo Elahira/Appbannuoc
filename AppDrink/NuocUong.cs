@@ -24,7 +24,6 @@ namespace AppDrink
         public string TenNuoc { get; set; }
         public Nullable<double> Gia { get; set; }
         public Nullable<int> IdTheloai { get; set; }
-        public string Hinhanh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDon { get; set; }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AppbannuocModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AppbannuocModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="IdHoadon" />
@@ -19,17 +19,16 @@
           <Key>
             <PropertyRef Name="IdNuoc" />
           </Key>
-          <Property Name="IdNuoc" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdNuoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenNuoc" Type="nvarchar" MaxLength="50" />
           <Property Name="Gia" Type="float" />
           <Property Name="IdTheloai" Type="int" />
-          <Property Name="Hinhanh" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
             <PropertyRef Name="IdNhanvien" />
           </Key>
-          <Property Name="IdNhanvien" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdNhanvien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Hoten" Type="nvarchar" MaxLength="50" />
           <Property Name="NgaySinh" Type="date" />
           <Property Name="Gioitinh" Type="nvarchar" MaxLength="50" />
@@ -39,7 +38,7 @@
           <Key>
             <PropertyRef Name="IdTK" />
           </Key>
-          <Property Name="IdTK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Taikhoan" Type="varchar" MaxLength="50" />
           <Property Name="Matkhau" Type="varchar" MaxLength="50" />
           <Property Name="Chucvu" Type="varchar" MaxLength="10" />
@@ -48,7 +47,7 @@
           <Key>
             <PropertyRef Name="IdTheloai" />
           </Key>
-          <Property Name="IdTheloai" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdTheloai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Tentheloai" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_HoaDon_NuocUong">
@@ -106,8 +105,7 @@
             <End Role="NuocUong" EntitySet="NuocUong" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AppbannuocModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -131,7 +129,6 @@
           <Property Name="TenNuoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Gia" Type="Double" />
           <Property Name="IdTheloai" Type="Int32" />
-          <Property Name="Hinhanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HoaDon" Relationship="Self.FK_HoaDon_NuocUong" FromRole="NuocUong" ToRole="HoaDon" />
           <NavigationProperty Name="TheLoai" Relationship="Self.FK_NuocUong_TheLoai" FromRole="NuocUong" ToRole="TheLoai" />
         </EntityType>
@@ -242,7 +239,6 @@
                 <ScalarProperty Name="TenNuoc" ColumnName="TenNuoc" />
                 <ScalarProperty Name="Gia" ColumnName="Gia" />
                 <ScalarProperty Name="IdTheloai" ColumnName="IdTheloai" />
-                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
