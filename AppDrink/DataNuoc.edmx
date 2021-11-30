@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="IdHoadon" />
           </Key>
-          <Property Name="IdHoadon" Type="int" Nullable="false" />
+          <Property Name="IdHoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdNuoc" Type="int" />
           <Property Name="NgayLap" Type="date" />
           <Property Name="IdNhanvien" Type="int" />

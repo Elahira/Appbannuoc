@@ -41,7 +41,7 @@ namespace AppDrink.GUI
             {
                 txtTk.Text = dataTaikhoan.Rows[index].Cells["Tkuser"].Value.ToString();
                 txtMk.Text = dataTaikhoan.Rows[index].Cells["Mkpass"].Value.ToString();
-                txtCv.Text = dataTaikhoan.Rows[index].Cells["Cvtype"].Value.ToString();
+                listCv.Text = dataTaikhoan.Rows[index].Cells["Cvtype"].Value.ToString();
             }
         }
 
@@ -53,9 +53,9 @@ namespace AppDrink.GUI
 
         public void themtaikhoan()
         {
-            if (txtTk.Text != "" && txtMk.Text != "" && txtCv.Text != "")
+            if (txtTk.Text != "" && txtMk.Text != "" && listCv.Text !="")
             {
-                TaiKhoan tk = new TaiKhoan() { Taikhoan = txtTk.Text, Matkhau = txtMk.Text, Chucvu = txtCv.Text };
+                TaiKhoan tk = new TaiKhoan() { Taikhoan = txtTk.Text, Matkhau = txtMk.Text, Chucvu = listCv.Text };
                 if (bustk.addtaikhoan(tk))
                 {
                     MessageBox.Show("Thêm thành công");
@@ -90,7 +90,7 @@ namespace AppDrink.GUI
                 TaiKhoan tk = dataTaikhoan.CurrentRow.DataBoundItem as TaiKhoan;
                 tk.Taikhoan = txtTk.Text;
                 tk.Matkhau = txtMk.Text;
-                tk.Chucvu = txtCv.Text;
+                tk.Chucvu = listCv.Text;
                 
                 if (bustk.edittaikhoan(tk))
                 {
@@ -99,6 +99,11 @@ namespace AppDrink.GUI
                 else
                     MessageBox.Show("Sửa không thành công");
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
