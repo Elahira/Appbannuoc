@@ -19,6 +19,7 @@ namespace AppDrink
         public Nullable<System.DateTime> NgayLap { get; set; }
         public Nullable<int> IdNhanvien { get; set; }
         public Nullable<int> Soluong { get; set; }
+        public Nullable<double> Thanhtien { get; set; }
     
         public virtual NuocUong NuocUong { get; set; }
         public virtual NhanVien NhanVien { get; set; }
