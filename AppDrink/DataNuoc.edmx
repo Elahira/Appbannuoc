@@ -13,7 +13,7 @@
           <Property Name="IdNuoc" Type="int" />
           <Property Name="NgayLap" Type="date" />
           <Property Name="IdNhanvien" Type="int" />
-          <Property Name="Thanhtien" Type="float" />
+          <Property Name="Soluong" Type="int" />
         </EntityType>
         <EntityType Name="NuocUong">
           <Key>
@@ -117,9 +117,9 @@
           <Property Name="IdNuoc" Type="Int32" />
           <Property Name="NgayLap" Type="DateTime" Precision="0" />
           <Property Name="IdNhanvien" Type="Int32" />
-          <Property Name="Thanhtien" Type="Double" />
           <NavigationProperty Name="NuocUong" Relationship="Self.FK_HoaDon_NuocUong" FromRole="HoaDon" ToRole="NuocUong" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
+          <Property Name="Soluong" Type="Int32" />
         </EntityType>
         <EntityType Name="NuocUong">
           <Key>
@@ -224,11 +224,11 @@
           <EntitySetMapping Name="HoaDon">
             <EntityTypeMapping TypeName="AppbannuocModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
                 <ScalarProperty Name="IdHoadon" ColumnName="IdHoadon" />
                 <ScalarProperty Name="IdNuoc" ColumnName="IdNuoc" />
                 <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="IdNhanvien" ColumnName="IdNhanvien" />
-                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
