@@ -96,7 +96,10 @@ GO
 USE [Appbannuoc]
 GO
 
-/****** Object:  Table [dbo].[HoaDon]    Script Date: 30/11/2021 3:06:01 CH ******/
+USE [Appbannuoc]
+GO
+
+/****** Object:  Table [dbo].[HoaDon]    Script Date: 30/11/2021 3:43:34 CH ******/
 SET ANSI_NULLS ON
 GO
 
@@ -104,7 +107,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[HoaDon](
-	[IdHoadon] [int] NOT NULL,
+	[IdHoadon] [int] IDENTITY(1,1) NOT NULL,
 	[IdNuoc] [int] NULL,
 	[NgayLap] [date] NULL,
 	[IdNhanvien] [int] NULL,
@@ -131,25 +134,26 @@ GO
 ALTER TABLE [dbo].[HoaDon] CHECK CONSTRAINT [FK_HoaDon_NuocUong]
 GO
 
+
 INSERT INTO dbo.TaiKhoan (Taikhoan, Matkhau, Chucvu) VALUES
 ('admin','123','admin'),
 ('staff','321','staff');
 
-INSERT INTO dbo.TheLoai(IdTheloai,Tentheloai) VALUES
-('1','trà'),
-('2','sữa'),
-('3','nước ngọt');
+INSERT INTO dbo.TheLoai(Tentheloai) VALUES
+('trà'),
+('sữa'),
+('nước ngọt');
 
-INSERT INTO dbo.NuocUong(IdNuoc,TenNuoc, Gia, IdTheloai) VALUES
-('1','Trà tắc','10000','1'),
-('2','Sữa dê dừa','10000','2'),
-('3','Coca','10000','3');
+INSERT INTO dbo.NuocUong(TenNuoc, Gia, IdTheloai) VALUES
+('Trà tắc','10000','1'),
+('Sữa dê dừa','10000','2'),
+('Coca','10000','3');
 
-INSERT INTO dbo.NhanVien(IdNhanvien,Hoten,Gioitinh,NgaySinh,DienThoai) VALUES
-('1','admin','nam',1/1/2000,'0707070707'),
-('2','staff','nu',1/1/2000,'0808080808');
+INSERT INTO dbo.NhanVien(Hoten,Gioitinh,NgaySinh,DienThoai) VALUES
+('admin','nam','1/1/2000','0707070707'),
+('staff','nu','1/1/2000','0808080808');
 
 
-INSERT INTO dbo.HoaDon(IdHoadon,IdNuoc,IdNhanvien,NgayLap,Soluong,Thanhtien) VALUES
-('1','1','2',1/12/2000,'1','10000'),
-('1','2','2',1/12/2000,'1','10000');
+INSERT INTO dbo.HoaDon(IdNuoc,IdNhanvien,NgayLap,Soluong,Thanhtien) VALUES
+('1','2','1/12/2020','1','10000'),
+('2','2','1/12/2020','1','10000');
