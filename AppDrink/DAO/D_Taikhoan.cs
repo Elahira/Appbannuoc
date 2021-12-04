@@ -10,7 +10,7 @@ namespace AppDrink.DAO
     {
         AppbannuocEntities db = new AppbannuocEntities();
 
-
+        //lấy data tài khoản
         public List<TaiKhoan> GetTaiKhoans()
         {
             List<TaiKhoan> dstk = new List<TaiKhoan>();
@@ -26,7 +26,8 @@ namespace AppDrink.DAO
             }
             return dstk;
         }
-
+        
+        //chức năng thêm tài khoản
         public bool themtaikhoan(TaiKhoan addtk)
         {
             {
@@ -35,6 +36,7 @@ namespace AppDrink.DAO
             }return true;
         }
 
+        //chức năng xóa tài khoản
         public bool xoataikhoan(int matk)
         {
             {
@@ -45,6 +47,7 @@ namespace AppDrink.DAO
             return true;
         }
 
+        //chức năng sửa tài khoản
         public bool suataikhoan(TaiKhoan edittk)
         {
             {

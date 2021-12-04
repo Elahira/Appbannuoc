@@ -58,8 +58,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\B_Nhanvien.cs" />
+    <Compile Include="BUS\B_Nuocuong.cs" />
     <Compile Include="BUS\B_Taikhoan.cs" />
+    <Compile Include="BUS\B_Theloai.cs" />
+    <Compile Include="BUS\B_Thongke.cs" />
+    <Compile Include="DAO\D_Nhanvien.cs" />
+    <Compile Include="DAO\D_Nuocuong.cs" />
     <Compile Include="DAO\D_Taikhoan.cs" />
+    <Compile Include="DAO\D_Theloai.cs" />
+    <Compile Include="DAO\D_Thongke.cs" />
     <Compile Include="DataNuoc.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
