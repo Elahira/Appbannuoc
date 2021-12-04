@@ -10,18 +10,48 @@ namespace AppDrink.DAO
     {
         AppbannuocEntities db = new AppbannuocEntities();
 
-        public List<TheLoai> getTheLoais()
+        public dynamic getTheLoais()
         {
-            List<TheLoai> dstln = new List<TheLoai>();
-            var ds = from tln in db.TheLoai select tln;
-            foreach (var i in ds)
+            
+            var dstl = db.TheLoai.Select(tl =>new
             {
-                TheLoai tln = new TheLoai();
-                tln.IdTheloai = i.IdTheloai;
-                tln.Tentheloai = i.Tentheloai;
-                dstln.Add(tln);
+                tl.IdTheloai,
+                tl.Tentheloai
+            }).ToList();
+           
+            return dstl;
+        }
+
+        //chức năng thêm thể loại
+        public bool themtheloai(TheLoai themtln)
+        {
+            {
+                db.TheLoai.Add(themtln);
+                db.SaveChanges();
             }
-            return dstln;
+            return true;
+        }
+
+        //chức năng xóa thể loại
+        public bool xoatheloai(int matln)
+        {
+            {
+                TheLoai tl = db.TheLoai.Find(matln);
+                db.TheLoai.Remove(tl);
+                db.SaveChanges();
+            }
+            return true;
+        }
+
+        //chức năng sửa thể loại
+        public bool suatheloai(TheLoai suatl)
+        {
+            {
+                TheLoai tl = db.TheLoai.Find(suatl.IdTheloai);
+                tl.Tentheloai = suatl.Tentheloai;
+                db.SaveChanges();
+            }
+            return true;
         }
     }
 }

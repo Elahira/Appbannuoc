@@ -14,7 +14,7 @@ namespace AppDrink.BUS
 
         public void laydanhsachnhanvien(DataGridView dg)
         {
-            dg.DataSource = daonv.GetNhanViens().ToList();
+            dg.DataSource = daonv.GetNhanViens();
         }
 
         public bool themNhanvien(NhanVien nv)

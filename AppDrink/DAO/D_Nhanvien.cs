@@ -11,20 +11,16 @@ namespace AppDrink.DAO
         AppbannuocEntities db = new AppbannuocEntities();
         
         //lấy data nhân viên
-        public List<NhanVien> GetNhanViens()
+        public dynamic GetNhanViens()
         {
-            List<NhanVien> dsnv = new List<NhanVien>();
-            var ds = from nv in db.NhanVien select nv;
-            foreach (var i in ds)
+            var dsnv = db.NhanVien.Select(nv => new
             {
-                NhanVien nv = new NhanVien();
-                nv.IdNhanvien = i.IdNhanvien;
-                nv.Hoten = i.Hoten;
-                nv.Gioitinh = i.Gioitinh;
-                nv.NgaySinh = i.NgaySinh;
-                nv.DienThoai = i.DienThoai;
-                dsnv.Add(nv);
-            }
+                nv.IdNhanvien,
+                nv.Hoten,
+                nv.Gioitinh,
+                nv.NgaySinh,
+                nv.DienThoai
+            }).ToList();
             return dsnv;
         }
 

@@ -14,7 +14,28 @@ namespace AppDrink.BUS
 
         public void laydanhsachtheloainuoc(DataGridView dg)
         {
-            dg.DataSource = daotln.getTheLoais().ToList();
+            dg.DataSource = daotln.getTheLoais();
+        }
+
+        public void laydanhsachtheloaicb(ComboBox cb)
+        {
+            cb.DataSource = daotln.getTheLoais();
+            cb.DisplayMember = "Tentheloai";
+        }
+
+        public bool themTheloai(TheLoai tl)
+        {
+            return daotln.themtheloai(tl);
+        }
+
+        public bool xoaTheloai(int matl)
+        {
+            return daotln.xoatheloai(matl);
+        }
+
+        public bool suaTheloai(TheLoai tl)
+        {
+            return daotln.suatheloai(tl);
         }
     }
 }
