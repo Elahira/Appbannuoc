@@ -10,16 +10,37 @@ namespace AppDrink.DAO
     {
         AppbannuocEntities db = new AppbannuocEntities();
 
-        public dynamic getNuocUongs()
+        /*public dynamic getNuocUongs()
         {
-            var ds = db.NuocUong.Select(s => new
-            {
-                s.IdNuoc,
-                s.TenNuoc,
-                s.Gia,
-                s.TheLoai.Tentheloai
-            }).ToList();
+            var ds = (from nc in db.NuocUong
+                     from tl in db.TheLoai
+                     where nc.IdTheloai == tl.IdTheloai
+                     select new
+                     {
+                         nc.IdNuoc,
+                         nc.TenNuoc,
+                         nc.Gia,
+                         tl.Tentheloai
+                     }).ToList();
             return ds;
+        }*/
+
+        public List<NuocUong> GetNuocUongs()
+        {
+            List<NuocUong> dsnc = new List<NuocUong>();
+            var ds = from nc in db.NuocUong
+                     join tl in db.TheLoai on nc.IdTheloai equals tl.IdTheloai
+                     select new { nc.IdNuoc, nc.TenNuoc, nc.Gia, nc.TheLoai};
+            foreach (var i in ds)
+            {
+                NuocUong nc = new NuocUong();
+                nc.IdNuoc = i.IdNuoc;
+                nc.TenNuoc = i.TenNuoc;
+                nc.Gia = i.Gia;
+                nc.Tentheloai = i.TheLoai.Tentheloai;
+                dsnc.Add(nc);
+            }
+            return dsnc;
         }
 
         //chức năng thêm nước
@@ -50,7 +71,7 @@ namespace AppDrink.DAO
                 NuocUong nc = db.NuocUong.Find(suanuoc.IdNuoc);
                 nc.TenNuoc = suanuoc.TenNuoc;
                 nc.Gia = suanuoc.Gia;
-                nc.TheLoai.Tentheloai = suanuoc.TheLoai.Tentheloai;
+                nc.IdTheloai = suanuoc.IdTheloai;
                 db.SaveChanges();
             }
             return true;

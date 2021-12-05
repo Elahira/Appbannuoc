@@ -175,8 +175,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HoaDon_NhanVien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <End Type="Self.NhanVien" Multiplicity="0..1" Role="NhanVien" />
+          <End Type="Self.HoaDon" Multiplicity="*" Role="HoaDon" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
               <PropertyRef Name="IdNhanvien" />
@@ -209,8 +209,8 @@
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
-            <End Role="NhanVien" EntitySet="NhanVien" />
-            <End Role="HoaDon" EntitySet="HoaDon" />
+            <End EntitySet="NhanVien" Role="NhanVien" />
+            <End EntitySet="HoaDon" Role="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK_NuocUong_TheLoai" Association="Self.FK_NuocUong_TheLoai">
             <End Role="TheLoai" EntitySet="TheLoai" />

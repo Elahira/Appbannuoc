@@ -86,9 +86,6 @@ namespace AppDrink.GUI
             this.loaiNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.thốngKêToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnXemloai = new System.Windows.Forms.Button();
             this.btnSualoai = new System.Windows.Forms.Button();
             this.btnXoaloai = new System.Windows.Forms.Button();
@@ -96,9 +93,12 @@ namespace AppDrink.GUI
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemloai = new System.Windows.Forms.Button();
             this.dgTheloainuoc = new System.Windows.Forms.DataGridView();
-            this.label17 = new System.Windows.Forms.Label();
             this.idtl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.theloainuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label17 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTaikhoan)).BeginInit();
@@ -107,8 +107,8 @@ namespace AppDrink.GUI
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgNuocuong)).BeginInit();
             this.tabPage4.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTheloainuoc)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // entityCommand1
@@ -130,7 +130,7 @@ namespace AppDrink.GUI
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1010, 486);
+            this.tabControl1.Size = new System.Drawing.Size(1010, 443);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -151,7 +151,7 @@ namespace AppDrink.GUI
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1002, 455);
+            this.tabPage1.Size = new System.Drawing.Size(1002, 412);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản lý tài khoản";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -291,7 +291,8 @@ namespace AppDrink.GUI
             this.dgTaikhoan.Location = new System.Drawing.Point(9, 48);
             this.dgTaikhoan.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgTaikhoan.Name = "dgTaikhoan";
-            this.dgTaikhoan.Size = new System.Drawing.Size(575, 376);
+            this.dgTaikhoan.ReadOnly = true;
+            this.dgTaikhoan.Size = new System.Drawing.Size(575, 354);
             this.dgTaikhoan.TabIndex = 17;
             this.dgTaikhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tk_cellclick);
             // 
@@ -300,6 +301,7 @@ namespace AppDrink.GUI
             this.Idtk.DataPropertyName = "IdTk";
             this.Idtk.HeaderText = "ID";
             this.Idtk.Name = "Idtk";
+            this.Idtk.ReadOnly = true;
             this.Idtk.Width = 80;
             // 
             // Tkuser
@@ -307,6 +309,7 @@ namespace AppDrink.GUI
             this.Tkuser.DataPropertyName = "Taikhoan";
             this.Tkuser.HeaderText = "Tài khoản";
             this.Tkuser.Name = "Tkuser";
+            this.Tkuser.ReadOnly = true;
             this.Tkuser.Width = 150;
             // 
             // Mkpass
@@ -314,6 +317,7 @@ namespace AppDrink.GUI
             this.Mkpass.DataPropertyName = "Matkhau";
             this.Mkpass.HeaderText = "Mật khẩu";
             this.Mkpass.Name = "Mkpass";
+            this.Mkpass.ReadOnly = true;
             this.Mkpass.Width = 150;
             // 
             // Cvtype
@@ -321,6 +325,7 @@ namespace AppDrink.GUI
             this.Cvtype.DataPropertyName = "Chucvu";
             this.Cvtype.HeaderText = "Chức vụ";
             this.Cvtype.Name = "Cvtype";
+            this.Cvtype.ReadOnly = true;
             // 
             // label1
             // 
@@ -353,7 +358,7 @@ namespace AppDrink.GUI
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage2.Size = new System.Drawing.Size(1002, 455);
+            this.tabPage2.Size = new System.Drawing.Size(1002, 412);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản lý nhân viên";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -507,7 +512,8 @@ namespace AppDrink.GUI
             this.dgNhanvien.Location = new System.Drawing.Point(11, 54);
             this.dgNhanvien.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgNhanvien.Name = "dgNhanvien";
-            this.dgNhanvien.Size = new System.Drawing.Size(643, 372);
+            this.dgNhanvien.ReadOnly = true;
+            this.dgNhanvien.Size = new System.Drawing.Size(643, 348);
             this.dgNhanvien.TabIndex = 18;
             this.dgNhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NhanvienCell_Click);
             // 
@@ -574,7 +580,7 @@ namespace AppDrink.GUI
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage3.Size = new System.Drawing.Size(1002, 455);
+            this.tabPage3.Size = new System.Drawing.Size(1002, 412);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quản lý nước";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -660,6 +666,7 @@ namespace AppDrink.GUI
             this.btnSuanuoc.TabIndex = 34;
             this.btnSuanuoc.Text = "Sửa";
             this.btnSuanuoc.UseVisualStyleBackColor = false;
+            this.btnSuanuoc.Click += new System.EventHandler(this.btnSuanuoc_Click);
             // 
             // btnXoanuoc
             // 
@@ -673,6 +680,7 @@ namespace AppDrink.GUI
             this.btnXoanuoc.TabIndex = 33;
             this.btnXoanuoc.Text = "Xóa";
             this.btnXoanuoc.UseVisualStyleBackColor = false;
+            this.btnXoanuoc.Click += new System.EventHandler(this.btnXoanuoc_Click);
             // 
             // btnThemnuoc
             // 
@@ -686,6 +694,7 @@ namespace AppDrink.GUI
             this.btnThemnuoc.TabIndex = 32;
             this.btnThemnuoc.Text = "Thêm";
             this.btnThemnuoc.UseVisualStyleBackColor = false;
+            this.btnThemnuoc.Click += new System.EventHandler(this.btnThemnuoc_Click);
             // 
             // dgNuocuong
             // 
@@ -700,8 +709,10 @@ namespace AppDrink.GUI
             this.loaiNuoc});
             this.dgNuocuong.Location = new System.Drawing.Point(13, 47);
             this.dgNuocuong.Name = "dgNuocuong";
-            this.dgNuocuong.Size = new System.Drawing.Size(616, 401);
+            this.dgNuocuong.ReadOnly = true;
+            this.dgNuocuong.Size = new System.Drawing.Size(616, 355);
             this.dgNuocuong.TabIndex = 1;
+            this.dgNuocuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NuocCell_Click);
             // 
             // Idnuoc
             // 
@@ -754,35 +765,10 @@ namespace AppDrink.GUI
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage4.Size = new System.Drawing.Size(1002, 455);
+            this.tabPage4.Size = new System.Drawing.Size(1002, 412);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Danh mục";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thốngKêToolStripMenuItem2,
-            this.menuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1010, 25);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // thốngKêToolStripMenuItem2
-            // 
-            this.thốngKêToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thốngKêToolStripMenuItem2.Name = "thốngKêToolStripMenuItem2";
-            this.thốngKêToolStripMenuItem2.Size = new System.Drawing.Size(74, 21);
-            this.thốngKêToolStripMenuItem2.Text = "Thống kê";
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
-            this.menuToolStripMenuItem.Text = "Menu";
             // 
             // btnXemloai
             // 
@@ -872,20 +858,10 @@ namespace AppDrink.GUI
             this.dgTheloainuoc.Location = new System.Drawing.Point(7, 48);
             this.dgTheloainuoc.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgTheloainuoc.Name = "dgTheloainuoc";
-            this.dgTheloainuoc.Size = new System.Drawing.Size(575, 376);
+            this.dgTheloainuoc.ReadOnly = true;
+            this.dgTheloainuoc.Size = new System.Drawing.Size(575, 354);
             this.dgTheloainuoc.TabIndex = 30;
             this.dgTheloainuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellTheloai_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 3);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(185, 23);
-            this.label17.TabIndex = 29;
-            this.label17.Text = "Danh mục thể loại nước";
             // 
             // idtl
             // 
@@ -900,11 +876,47 @@ namespace AppDrink.GUI
             this.theloainuoc.Name = "theloainuoc";
             this.theloainuoc.Width = 120;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(3, 3);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(185, 23);
+            this.label17.TabIndex = 29;
+            this.label17.Text = "Danh mục thể loại nước";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem,
+            this.thốngKêToolStripMenuItem2});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1010, 25);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // thốngKêToolStripMenuItem2
+            // 
+            this.thốngKêToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thốngKêToolStripMenuItem2.Name = "thốngKêToolStripMenuItem2";
+            this.thốngKêToolStripMenuItem2.Size = new System.Drawing.Size(74, 21);
+            this.thốngKêToolStripMenuItem2.Text = "Thống kê";
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 515);
+            this.ClientSize = new System.Drawing.Size(1010, 473);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl1);
             this.MainMenuStrip = this.menuStrip1;
@@ -924,9 +936,9 @@ namespace AppDrink.GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgNuocuong)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTheloainuoc)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgTheloainuoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

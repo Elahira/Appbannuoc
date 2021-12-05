@@ -41,8 +41,8 @@ namespace AppDrink.GUI
         {
             hienthitk();
             hienthinhanvien();
-            hienthinuocuong();
             hienthitheloai();
+            hienthinuocuong();
             bustln.laydanhsachtheloaicb(cbLoainuoc);
         }
 
@@ -200,8 +200,61 @@ namespace AppDrink.GUI
         {
             hienthinuocuong();
         }
+        //thêm nước
+        private void btnThemnuoc_Click(object sender, EventArgs e)
+        {
+            if (txtTennuoc.Text !="" && txtGiatien.Text !="" && cbLoainuoc.Text !="")
+            {
+                NuocUong nc = new NuocUong() { 
+                    TenNuoc = txtTennuoc.Text, 
+                    Gia = int.Parse(txtGiatien.Text), 
+                    IdTheloai = bustln.getmatheloai(cbLoainuoc.Text) 
+                };
+                
+                if (busnuoc.themNuoc(nc))
+                {
+                    MessageBox.Show("Thêm thành công");
+                }
+                else
+                    MessageBox.Show("Thêm không thành công");
+            }
+            else
+                MessageBox.Show("Xin hãy nhập đầy đủ thông tin");
+        }
 
+        private void btnSuanuoc_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn sửa thông tin nước uống này?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                NuocUong nc = dgNuocuong.CurrentRow.DataBoundItem as NuocUong;
+                nc.TenNuoc = txtTennuoc.Text;
+                nc.Gia = int.Parse(txtGiatien.Text);
+                nc.IdTheloai = bustln.getmatheloai(cbLoainuoc.Text);
 
+                if (busnuoc.suaNuoc(nc))
+                {
+                    MessageBox.Show("Sửa thành công!");
+                }
+                else
+                    MessageBox.Show("Sửa không thành công");
+            }
+        }
+
+        private void btnXoanuoc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NuocCell_Click(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+                txtTennuoc.Text = dgNuocuong.Rows[index].Cells["tenNuoc"].Value.ToString();
+                txtGiatien.Text = dgNuocuong.Rows[index].Cells["giaTien"].Value.ToString();
+                cbLoainuoc.Text = dgNuocuong.Rows[index].Cells["loaiNuoc"].Value.ToString();
+            }
+        }
 
         //quản lý danh mục thể loại
         public void hienthitheloai()
@@ -209,7 +262,7 @@ namespace AppDrink.GUI
             dgTheloainuoc.AutoGenerateColumns = false;
             bustln.laydanhsachtheloainuoc(dgTheloainuoc);
         }
-
+        //xem danh sách thể loại
         private void btnXemloai_Click(object sender, EventArgs e)
         {
             hienthitheloai();
@@ -278,6 +331,7 @@ namespace AppDrink.GUI
                 
             }
         }
+
     }
 
 }

@@ -14,7 +14,22 @@ namespace AppDrink.BUS
 
         public void laydanhsachnuoc(DataGridView dg)
         {
-            dg.DataSource = daonuoc.getNuocUongs();
+            dg.DataSource = daonuoc.GetNuocUongs().ToList();
+        }
+
+        public bool themNuoc(NuocUong nc)
+        {
+            return daonuoc.themnuocuong(nc);
+        }
+
+        public bool suaNuoc(NuocUong nc)
+        {
+            return daonuoc.suanuocuong(nc);
+        }
+
+        public bool xoaNuoc(int manuoc)
+        {
+            return daonuoc.xoanuocuong(manuoc);
         }
     }
 }

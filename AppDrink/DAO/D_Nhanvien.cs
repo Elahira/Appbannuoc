@@ -9,18 +9,22 @@ namespace AppDrink.DAO
     class D_Nhanvien
     {
         AppbannuocEntities db = new AppbannuocEntities();
-        
+
         //lấy data nhân viên
-        public dynamic GetNhanViens()
+        public List<NhanVien> GetNhanViens()
         {
-            var dsnv = db.NhanVien.Select(nv => new
+            List<NhanVien> dsnv = new List<NhanVien>();
+            var ds = from nv in db.NhanVien select nv;
+            foreach (var i in ds)
             {
-                nv.IdNhanvien,
-                nv.Hoten,
-                nv.Gioitinh,
-                nv.NgaySinh,
-                nv.DienThoai
-            }).ToList();
+                NhanVien nv = new NhanVien();
+                nv.IdNhanvien = i.IdNhanvien;
+                nv.Hoten = i.Hoten;
+                nv.Gioitinh = i.Gioitinh;
+                nv.NgaySinh = i.NgaySinh;
+                nv.DienThoai = i.DienThoai;
+                dsnv.Add(nv);
+            }
             return dsnv;
         }
 

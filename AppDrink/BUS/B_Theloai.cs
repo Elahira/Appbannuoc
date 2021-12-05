@@ -21,6 +21,12 @@ namespace AppDrink.BUS
         {
             cb.DataSource = daotln.getTheLoais();
             cb.DisplayMember = "Tentheloai";
+            
+        }
+
+        public int getmatheloai(String tenTheloai)
+        {
+            return daotln.getMatheloai(tenTheloai);
         }
 
         public bool themTheloai(TheLoai tl)

@@ -14,6 +14,7 @@ namespace AppDrink.GUI
     public partial class FormLogin : Form
     {
         B_Taikhoan bustk = new B_Taikhoan();
+        
         public FormLogin()
         {
             InitializeComponent();

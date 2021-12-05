@@ -12,14 +12,18 @@ namespace AppDrink.DAO
 
         public dynamic getTheLoais()
         {
-            
-            var dstl = db.TheLoai.Select(tl =>new
-            {
-                tl.IdTheloai,
-                tl.Tentheloai
-            }).ToList();
-           
+
+            var dstl = (from tl in db.TheLoai select tl).ToList();
             return dstl;
+        }
+
+        public int getMatheloai(String tentheloai)
+        {
+            var tln = from tl in db.TheLoai
+                      where tl.Tentheloai == tentheloai
+                      select new { tl.IdTheloai };
+            int mtl = tln.First().IdTheloai;
+            return mtl;
         }
 
         //chức năng thêm thể loại

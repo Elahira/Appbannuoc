@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="AppbannuocModel.TaiKhoan" Width="1.5" PointX="3.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AppbannuocModel.TheLoai" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="AppbannuocModel.FK_HoaDon_NuocUong" ManuallyRouted="false" />
-        <AssociationConnector Association="AppbannuocModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="AppbannuocModel.FK_HoaDon_NhanVien" />
         <AssociationConnector Association="AppbannuocModel.FK_NuocUong_TheLoai" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

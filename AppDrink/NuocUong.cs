@@ -28,5 +28,6 @@ namespace AppDrink
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDon { get; set; }
         public virtual TheLoai TheLoai { get; set; }
+        public string Tentheloai { get; set; }
     }
 }
