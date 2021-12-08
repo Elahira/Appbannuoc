@@ -26,14 +26,27 @@ namespace AppDrink.GUI
         {
             if (txtTk.Text != "" && txtMk.Text != "")
             {
-                if (bustk.checklogin(txtTk.Text, txtMk.Text))
+                if (bustk.checkloginadmin(txtTk.Text, txtMk.Text))
                 {
                     MessageBox.Show("Đăng nhập thành công");
-                    FormAdmin f = new FormAdmin();
+                    FormMain fm = new FormMain();
+                    
                     this.Hide();
-                    f.ShowDialog();
+                    fm.ShowDialog();
+                    this.Show();
+                    
+                }
+
+                else if (bustk.checkloginstaff(txtTk.Text, txtMk.Text))
+                {
+                    MessageBox.Show("Đăng nhập thành công");
+                    FormStaff fs = new FormStaff();
+                    
+                    this.Hide();
+                    fs.ShowDialog();
                     this.Show();
                 }
+
                 else
                     MessageBox.Show("Sai thông tin đăng nhập");
             }

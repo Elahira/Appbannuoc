@@ -11,17 +11,32 @@ namespace AppDrink.BUS
     class B_Taikhoan
     {
         D_Taikhoan daotk = new D_Taikhoan();
-
+        
         public void laydanhsachtaikhoan(DataGridView dg)
         {
             dg.DataSource = daotk.GetTaiKhoans().ToList();
         }
 
-        public bool checklogin(string tk, string mk)
+        public bool checkloginadmin(string tk, string mk)
         {
             List<TaiKhoan> list = new List<TaiKhoan>();
-            list = daotk.GetTaiKhoans();
-            foreach(var i in list){
+            list = daotk.GetTaiKhoanAdmin();
+            foreach (var i in list)
+            {
+                if (i.Taikhoan == tk && i.Matkhau == mk)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool checkloginstaff(string tk, string mk)
+        {
+            List<TaiKhoan> list = new List<TaiKhoan>();
+            list = daotk.GetTaiKhoanStaff();
+            foreach (var i in list)
+            {
                 if (i.Taikhoan == tk && i.Matkhau == mk)
                 {
                     return true;

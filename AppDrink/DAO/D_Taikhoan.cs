@@ -26,7 +26,43 @@ namespace AppDrink.DAO
             }
             return dstk;
         }
-        
+
+        public List<TaiKhoan> GetTaiKhoanAdmin()
+        {
+            List<TaiKhoan> dstk = new List<TaiKhoan>();
+            var ds = from tk in db.TaiKhoan
+                     where tk.Chucvu =="admin"
+                     select tk;
+            foreach (var i in ds)
+            {
+                TaiKhoan tk = new TaiKhoan();
+                tk.IdTK = i.IdTK;
+                tk.Taikhoan = i.Taikhoan;
+                tk.Matkhau = i.Matkhau;
+                tk.Chucvu = i.Chucvu;
+                dstk.Add(tk);
+            }
+            return dstk;
+        }
+
+        public List<TaiKhoan> GetTaiKhoanStaff()
+        {
+            List<TaiKhoan> dstk = new List<TaiKhoan>();
+            var ds = from tk in db.TaiKhoan
+                     where tk.Chucvu == "staff"
+                     select tk;
+            foreach (var i in ds)
+            {
+                TaiKhoan tk = new TaiKhoan();
+                tk.IdTK = i.IdTK;
+                tk.Taikhoan = i.Taikhoan;
+                tk.Matkhau = i.Matkhau;
+                tk.Chucvu = i.Chucvu;
+                dstk.Add(tk);
+            }
+            return dstk;
+        }
+
         //chức năng thêm tài khoản
         public bool themtaikhoan(TaiKhoan addtk)
         {

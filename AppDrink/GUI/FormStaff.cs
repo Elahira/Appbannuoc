@@ -175,7 +175,14 @@ namespace AppDrink.GUI
 
             }
         }
-        
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+            FormMenu fm = new FormMenu();
+            this.Hide();
+            fm.ShowDialog();
+            this.Show();
+        }
     }
 
 }
