@@ -135,6 +135,7 @@ namespace AppDrink.GUI
             // btnXemnuoc
             // 
             this.btnXemnuoc.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXemnuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemnuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemnuoc.ForeColor = System.Drawing.Color.Snow;
             this.btnXemnuoc.Location = new System.Drawing.Point(799, 112);
@@ -149,6 +150,7 @@ namespace AppDrink.GUI
             // btnSuanuoc
             // 
             this.btnSuanuoc.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSuanuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuanuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuanuoc.ForeColor = System.Drawing.Color.Snow;
             this.btnSuanuoc.Location = new System.Drawing.Point(799, 49);
@@ -163,6 +165,7 @@ namespace AppDrink.GUI
             // btnXoanuoc
             // 
             this.btnXoanuoc.BackColor = System.Drawing.Color.Crimson;
+            this.btnXoanuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoanuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoanuoc.ForeColor = System.Drawing.Color.Snow;
             this.btnXoanuoc.Location = new System.Drawing.Point(706, 112);
@@ -177,6 +180,7 @@ namespace AppDrink.GUI
             // btnThemnuoc
             // 
             this.btnThemnuoc.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnThemnuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemnuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemnuoc.ForeColor = System.Drawing.Color.Snow;
             this.btnThemnuoc.Location = new System.Drawing.Point(706, 49);
@@ -256,7 +260,7 @@ namespace AppDrink.GUI
             this.ClientSize = new System.Drawing.Size(1003, 520);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormQuanlynuoc";
             this.Text = "Nước uống";
             this.Load += new System.EventHandler(this.FormQuanlynuoc_Load);

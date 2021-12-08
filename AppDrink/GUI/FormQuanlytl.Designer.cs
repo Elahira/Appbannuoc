@@ -64,6 +64,7 @@ namespace AppDrink.GUI
             // btnXemloai
             // 
             this.btnXemloai.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXemloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemloai.ForeColor = System.Drawing.Color.Snow;
             this.btnXemloai.Location = new System.Drawing.Point(644, 172);
@@ -78,6 +79,7 @@ namespace AppDrink.GUI
             // btnSualoai
             // 
             this.btnSualoai.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSualoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSualoai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSualoai.ForeColor = System.Drawing.Color.Snow;
             this.btnSualoai.Location = new System.Drawing.Point(644, 109);
@@ -92,6 +94,7 @@ namespace AppDrink.GUI
             // btnXoaloai
             // 
             this.btnXoaloai.BackColor = System.Drawing.Color.Crimson;
+            this.btnXoaloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaloai.ForeColor = System.Drawing.Color.Snow;
             this.btnXoaloai.Location = new System.Drawing.Point(549, 171);
@@ -125,6 +128,7 @@ namespace AppDrink.GUI
             // btnThemloai
             // 
             this.btnThemloai.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnThemloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemloai.ForeColor = System.Drawing.Color.Snow;
             this.btnThemloai.Location = new System.Drawing.Point(549, 109);

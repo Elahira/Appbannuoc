@@ -280,7 +280,7 @@ namespace AppDrink.GUI
             this.iconBtnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnMenu.UseVisualStyleBackColor = true;
-            this.iconBtnMenu.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconBtnMenu.Click += new System.EventHandler(this.btnMenu);
             // 
             // panelDesktop
             // 

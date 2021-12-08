@@ -165,6 +165,7 @@ namespace AppDrink.GUI
             // btnXemnv
             // 
             this.btnXemnv.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXemnv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemnv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemnv.ForeColor = System.Drawing.Color.Snow;
             this.btnXemnv.Location = new System.Drawing.Point(854, 81);
@@ -178,6 +179,7 @@ namespace AppDrink.GUI
             // btnSuanv
             // 
             this.btnSuanv.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSuanv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuanv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuanv.ForeColor = System.Drawing.Color.Snow;
             this.btnSuanv.Location = new System.Drawing.Point(854, 18);
@@ -191,6 +193,7 @@ namespace AppDrink.GUI
             // btnXoanv
             // 
             this.btnXoanv.BackColor = System.Drawing.Color.Crimson;
+            this.btnXoanv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoanv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoanv.ForeColor = System.Drawing.Color.Snow;
             this.btnXoanv.Location = new System.Drawing.Point(761, 81);
@@ -204,6 +207,7 @@ namespace AppDrink.GUI
             // btnThemnv
             // 
             this.btnThemnv.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnThemnv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemnv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemnv.ForeColor = System.Drawing.Color.Snow;
             this.btnThemnv.Location = new System.Drawing.Point(761, 18);

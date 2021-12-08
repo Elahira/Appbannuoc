@@ -67,6 +67,7 @@ namespace AppDrink.GUI
             // btnXemtk
             // 
             this.btnXemtk.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXemtk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemtk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemtk.ForeColor = System.Drawing.Color.Snow;
             this.btnXemtk.Location = new System.Drawing.Point(802, 106);
@@ -81,6 +82,7 @@ namespace AppDrink.GUI
             // btnSuatk
             // 
             this.btnSuatk.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSuatk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuatk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuatk.ForeColor = System.Drawing.Color.Snow;
             this.btnSuatk.Location = new System.Drawing.Point(802, 43);
@@ -95,6 +97,7 @@ namespace AppDrink.GUI
             // btnXoatk
             // 
             this.btnXoatk.BackColor = System.Drawing.Color.Crimson;
+            this.btnXoatk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoatk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoatk.ForeColor = System.Drawing.Color.Snow;
             this.btnXoatk.Location = new System.Drawing.Point(713, 104);
@@ -157,6 +160,7 @@ namespace AppDrink.GUI
             // btnThemtk
             // 
             this.btnThemtk.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnThemtk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemtk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemtk.ForeColor = System.Drawing.Color.Snow;
             this.btnThemtk.Location = new System.Drawing.Point(713, 43);

@@ -113,11 +113,6 @@ namespace AppDrink.GUI
             
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void reset()
         {
             DisableBtn();
@@ -150,6 +145,12 @@ namespace AppDrink.GUI
             this.Close();
         }
 
-        
+        private void btnMenu(object sender, EventArgs e)
+        {
+            FormMenu fmenu = new FormMenu();
+            this.Hide();
+            fmenu.ShowDialog();
+            this.Show();
+        }
     }
 }

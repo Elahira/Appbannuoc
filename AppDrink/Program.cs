@@ -16,7 +16,7 @@ namespace AppDrink
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.FormMain());
+            Application.Run(new GUI.FormLogin());
         }
     }
 }
