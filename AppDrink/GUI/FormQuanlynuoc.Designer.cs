@@ -141,7 +141,6 @@ namespace AppDrink.GUI
             // 
             // btnXemnuoc
             // 
-            this.btnXemnuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXemnuoc.BackColor = System.Drawing.Color.OrangeRed;
             this.btnXemnuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemnuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,7 +148,7 @@ namespace AppDrink.GUI
             this.btnXemnuoc.Location = new System.Drawing.Point(799, 112);
             this.btnXemnuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXemnuoc.Name = "btnXemnuoc";
-            this.btnXemnuoc.Size = new System.Drawing.Size(87, 38);
+            this.btnXemnuoc.Size = new System.Drawing.Size(87, 42);
             this.btnXemnuoc.TabIndex = 59;
             this.btnXemnuoc.Text = "Xem";
             this.btnXemnuoc.UseVisualStyleBackColor = false;
@@ -157,7 +156,6 @@ namespace AppDrink.GUI
             // 
             // btnSuanuoc
             // 
-            this.btnSuanuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSuanuoc.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSuanuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuanuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,7 +163,7 @@ namespace AppDrink.GUI
             this.btnSuanuoc.Location = new System.Drawing.Point(799, 49);
             this.btnSuanuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSuanuoc.Name = "btnSuanuoc";
-            this.btnSuanuoc.Size = new System.Drawing.Size(87, 38);
+            this.btnSuanuoc.Size = new System.Drawing.Size(87, 42);
             this.btnSuanuoc.TabIndex = 58;
             this.btnSuanuoc.Text = "Sửa";
             this.btnSuanuoc.UseVisualStyleBackColor = false;
@@ -173,7 +171,6 @@ namespace AppDrink.GUI
             // 
             // btnXoanuoc
             // 
-            this.btnXoanuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXoanuoc.BackColor = System.Drawing.Color.Crimson;
             this.btnXoanuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoanuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,7 +178,7 @@ namespace AppDrink.GUI
             this.btnXoanuoc.Location = new System.Drawing.Point(706, 112);
             this.btnXoanuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoanuoc.Name = "btnXoanuoc";
-            this.btnXoanuoc.Size = new System.Drawing.Size(87, 38);
+            this.btnXoanuoc.Size = new System.Drawing.Size(87, 42);
             this.btnXoanuoc.TabIndex = 57;
             this.btnXoanuoc.Text = "Xóa";
             this.btnXoanuoc.UseVisualStyleBackColor = false;
@@ -189,7 +186,6 @@ namespace AppDrink.GUI
             // 
             // btnThemnuoc
             // 
-            this.btnThemnuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemnuoc.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnThemnuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemnuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,7 +193,7 @@ namespace AppDrink.GUI
             this.btnThemnuoc.Location = new System.Drawing.Point(706, 49);
             this.btnThemnuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemnuoc.Name = "btnThemnuoc";
-            this.btnThemnuoc.Size = new System.Drawing.Size(87, 38);
+            this.btnThemnuoc.Size = new System.Drawing.Size(87, 42);
             this.btnThemnuoc.TabIndex = 56;
             this.btnThemnuoc.Text = "Thêm";
             this.btnThemnuoc.UseVisualStyleBackColor = false;

@@ -71,7 +71,7 @@ namespace AppDrink.GUI
             this.btnXemloai.Location = new System.Drawing.Point(644, 172);
             this.btnXemloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXemloai.Name = "btnXemloai";
-            this.btnXemloai.Size = new System.Drawing.Size(81, 43);
+            this.btnXemloai.Size = new System.Drawing.Size(87, 42);
             this.btnXemloai.TabIndex = 55;
             this.btnXemloai.Text = "Xem";
             this.btnXemloai.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@ namespace AppDrink.GUI
             this.btnSualoai.Location = new System.Drawing.Point(644, 109);
             this.btnSualoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSualoai.Name = "btnSualoai";
-            this.btnSualoai.Size = new System.Drawing.Size(81, 43);
+            this.btnSualoai.Size = new System.Drawing.Size(87, 42);
             this.btnSualoai.TabIndex = 54;
             this.btnSualoai.Text = "Sửa";
             this.btnSualoai.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@ namespace AppDrink.GUI
             this.btnXoaloai.Location = new System.Drawing.Point(549, 171);
             this.btnXoaloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoaloai.Name = "btnXoaloai";
-            this.btnXoaloai.Size = new System.Drawing.Size(81, 43);
+            this.btnXoaloai.Size = new System.Drawing.Size(87, 42);
             this.btnXoaloai.TabIndex = 53;
             this.btnXoaloai.Text = "Xóa";
             this.btnXoaloai.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@ namespace AppDrink.GUI
             this.btnThemloai.Location = new System.Drawing.Point(549, 109);
             this.btnThemloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemloai.Name = "btnThemloai";
-            this.btnThemloai.Size = new System.Drawing.Size(81, 43);
+            this.btnThemloai.Size = new System.Drawing.Size(87, 42);
             this.btnThemloai.TabIndex = 50;
             this.btnThemloai.Text = "Thêm";
             this.btnThemloai.UseVisualStyleBackColor = false;

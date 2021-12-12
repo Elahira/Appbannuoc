@@ -30,22 +30,22 @@ namespace AppDrink.GUI
         private void InitializeComponent()
         {
             this.panelChucnang = new System.Windows.Forms.Panel();
-            this.txtTk = new System.Windows.Forms.TextBox();
-            this.txtMk = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSuatk = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnXemtk = new System.Windows.Forms.Button();
-            this.btnThemtk = new System.Windows.Forms.Button();
-            this.listCv = new System.Windows.Forms.ComboBox();
-            this.btnXoatk = new System.Windows.Forms.Button();
-            this.Cvtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mkpass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tkuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Idtk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgTaikhoan = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgTaikhoan = new System.Windows.Forms.DataGridView();
+            this.Idtk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tkuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mkpass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cvtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnXoatk = new System.Windows.Forms.Button();
+            this.listCv = new System.Windows.Forms.ComboBox();
+            this.btnThemtk = new System.Windows.Forms.Button();
+            this.btnXemtk = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSuatk = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMk = new System.Windows.Forms.TextBox();
+            this.txtTk = new System.Windows.Forms.TextBox();
             this.panelChucnang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTaikhoan)).BeginInit();
             this.SuspendLayout();
@@ -72,168 +72,17 @@ namespace AppDrink.GUI
             this.panelChucnang.Size = new System.Drawing.Size(969, 486);
             this.panelChucnang.TabIndex = 41;
             // 
-            // txtTk
+            // label1
             // 
-            this.txtTk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTk.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTk.Location = new System.Drawing.Point(734, 183);
-            this.txtTk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTk.Name = "txtTk";
-            this.txtTk.Size = new System.Drawing.Size(183, 30);
-            this.txtTk.TabIndex = 35;
-            // 
-            // txtMk
-            // 
-            this.txtMk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMk.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMk.Location = new System.Drawing.Point(734, 266);
-            this.txtMk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMk.Name = "txtMk";
-            this.txtMk.Size = new System.Drawing.Size(183, 30);
-            this.txtMk.TabIndex = 36;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(631, 355);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 23);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Chức vụ:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(631, 269);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 23);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Mật khẩu:";
-            // 
-            // btnSuatk
-            // 
-            this.btnSuatk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSuatk.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnSuatk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuatk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuatk.ForeColor = System.Drawing.Color.Snow;
-            this.btnSuatk.Location = new System.Drawing.Point(802, 43);
-            this.btnSuatk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSuatk.Name = "btnSuatk";
-            this.btnSuatk.Size = new System.Drawing.Size(83, 44);
-            this.btnSuatk.TabIndex = 38;
-            this.btnSuatk.Text = "Sửa";
-            this.btnSuatk.UseVisualStyleBackColor = false;
-            this.btnSuatk.Click += new System.EventHandler(this.btnSuatk_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(627, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 23);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Tài khoản:";
-            // 
-            // btnXemtk
-            // 
-            this.btnXemtk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXemtk.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnXemtk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemtk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemtk.ForeColor = System.Drawing.Color.Snow;
-            this.btnXemtk.Location = new System.Drawing.Point(802, 106);
-            this.btnXemtk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXemtk.Name = "btnXemtk";
-            this.btnXemtk.Size = new System.Drawing.Size(83, 44);
-            this.btnXemtk.TabIndex = 39;
-            this.btnXemtk.Text = "Xem";
-            this.btnXemtk.UseVisualStyleBackColor = false;
-            this.btnXemtk.Click += new System.EventHandler(this.btnXemtk_Click);
-            // 
-            // btnThemtk
-            // 
-            this.btnThemtk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThemtk.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnThemtk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemtk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemtk.ForeColor = System.Drawing.Color.Snow;
-            this.btnThemtk.Location = new System.Drawing.Point(713, 43);
-            this.btnThemtk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnThemtk.Name = "btnThemtk";
-            this.btnThemtk.Size = new System.Drawing.Size(83, 44);
-            this.btnThemtk.TabIndex = 31;
-            this.btnThemtk.Text = "Thêm";
-            this.btnThemtk.UseVisualStyleBackColor = false;
-            this.btnThemtk.Click += new System.EventHandler(this.btnThemtk_Click);
-            // 
-            // listCv
-            // 
-            this.listCv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.listCv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.listCv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listCv.FormattingEnabled = true;
-            this.listCv.Items.AddRange(new object[] {
-            "admin",
-            "staff"});
-            this.listCv.Location = new System.Drawing.Point(738, 349);
-            this.listCv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listCv.Name = "listCv";
-            this.listCv.Size = new System.Drawing.Size(107, 31);
-            this.listCv.TabIndex = 40;
-            // 
-            // btnXoatk
-            // 
-            this.btnXoatk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoatk.BackColor = System.Drawing.Color.Crimson;
-            this.btnXoatk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoatk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoatk.ForeColor = System.Drawing.Color.Snow;
-            this.btnXoatk.Location = new System.Drawing.Point(713, 104);
-            this.btnXoatk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXoatk.Name = "btnXoatk";
-            this.btnXoatk.Size = new System.Drawing.Size(83, 44);
-            this.btnXoatk.TabIndex = 37;
-            this.btnXoatk.Text = "Xóa";
-            this.btnXoatk.UseVisualStyleBackColor = false;
-            this.btnXoatk.Click += new System.EventHandler(this.btnXoatk_Click);
-            // 
-            // Cvtype
-            // 
-            this.Cvtype.DataPropertyName = "Chucvu";
-            this.Cvtype.HeaderText = "Chức vụ";
-            this.Cvtype.Name = "Cvtype";
-            this.Cvtype.ReadOnly = true;
-            // 
-            // Mkpass
-            // 
-            this.Mkpass.DataPropertyName = "Matkhau";
-            this.Mkpass.HeaderText = "Mật khẩu";
-            this.Mkpass.Name = "Mkpass";
-            this.Mkpass.ReadOnly = true;
-            this.Mkpass.Width = 150;
-            // 
-            // Tkuser
-            // 
-            this.Tkuser.DataPropertyName = "Taikhoan";
-            this.Tkuser.HeaderText = "Tài khoản";
-            this.Tkuser.Name = "Tkuser";
-            this.Tkuser.ReadOnly = true;
-            this.Tkuser.Width = 150;
-            // 
-            // Idtk
-            // 
-            this.Idtk.DataPropertyName = "IdTk";
-            this.Idtk.HeaderText = "ID";
-            this.Idtk.Name = "Idtk";
-            this.Idtk.ReadOnly = true;
-            this.Idtk.Width = 80;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 23);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Danh sách tài khoản";
             // 
             // dgTaikhoan
             // 
@@ -255,17 +104,168 @@ namespace AppDrink.GUI
             this.dgTaikhoan.TabIndex = 30;
             this.dgTaikhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tk_cellclick);
             // 
-            // label1
+            // Idtk
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 23);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Danh sách tài khoản";
+            this.Idtk.DataPropertyName = "IdTk";
+            this.Idtk.HeaderText = "ID";
+            this.Idtk.Name = "Idtk";
+            this.Idtk.ReadOnly = true;
+            this.Idtk.Width = 80;
+            // 
+            // Tkuser
+            // 
+            this.Tkuser.DataPropertyName = "Taikhoan";
+            this.Tkuser.HeaderText = "Tài khoản";
+            this.Tkuser.Name = "Tkuser";
+            this.Tkuser.ReadOnly = true;
+            this.Tkuser.Width = 150;
+            // 
+            // Mkpass
+            // 
+            this.Mkpass.DataPropertyName = "Matkhau";
+            this.Mkpass.HeaderText = "Mật khẩu";
+            this.Mkpass.Name = "Mkpass";
+            this.Mkpass.ReadOnly = true;
+            this.Mkpass.Width = 150;
+            // 
+            // Cvtype
+            // 
+            this.Cvtype.DataPropertyName = "Chucvu";
+            this.Cvtype.HeaderText = "Chức vụ";
+            this.Cvtype.Name = "Cvtype";
+            this.Cvtype.ReadOnly = true;
+            // 
+            // btnXoatk
+            // 
+            this.btnXoatk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoatk.BackColor = System.Drawing.Color.Crimson;
+            this.btnXoatk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoatk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoatk.ForeColor = System.Drawing.Color.Snow;
+            this.btnXoatk.Location = new System.Drawing.Point(713, 104);
+            this.btnXoatk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoatk.Name = "btnXoatk";
+            this.btnXoatk.Size = new System.Drawing.Size(87, 42);
+            this.btnXoatk.TabIndex = 37;
+            this.btnXoatk.Text = "Xóa";
+            this.btnXoatk.UseVisualStyleBackColor = false;
+            this.btnXoatk.Click += new System.EventHandler(this.btnXoatk_Click);
+            // 
+            // listCv
+            // 
+            this.listCv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.listCv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.listCv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listCv.FormattingEnabled = true;
+            this.listCv.Items.AddRange(new object[] {
+            "admin",
+            "staff"});
+            this.listCv.Location = new System.Drawing.Point(738, 349);
+            this.listCv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listCv.Name = "listCv";
+            this.listCv.Size = new System.Drawing.Size(107, 31);
+            this.listCv.TabIndex = 40;
+            // 
+            // btnThemtk
+            // 
+            this.btnThemtk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThemtk.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnThemtk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemtk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemtk.ForeColor = System.Drawing.Color.Snow;
+            this.btnThemtk.Location = new System.Drawing.Point(713, 43);
+            this.btnThemtk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThemtk.Name = "btnThemtk";
+            this.btnThemtk.Size = new System.Drawing.Size(87, 42);
+            this.btnThemtk.TabIndex = 31;
+            this.btnThemtk.Text = "Thêm";
+            this.btnThemtk.UseVisualStyleBackColor = false;
+            this.btnThemtk.Click += new System.EventHandler(this.btnThemtk_Click);
+            // 
+            // btnXemtk
+            // 
+            this.btnXemtk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXemtk.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXemtk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemtk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemtk.ForeColor = System.Drawing.Color.Snow;
+            this.btnXemtk.Location = new System.Drawing.Point(802, 106);
+            this.btnXemtk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXemtk.Name = "btnXemtk";
+            this.btnXemtk.Size = new System.Drawing.Size(87, 42);
+            this.btnXemtk.TabIndex = 39;
+            this.btnXemtk.Text = "Xem";
+            this.btnXemtk.UseVisualStyleBackColor = false;
+            this.btnXemtk.Click += new System.EventHandler(this.btnXemtk_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(627, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 23);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Tài khoản:";
+            // 
+            // btnSuatk
+            // 
+            this.btnSuatk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSuatk.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSuatk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuatk.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuatk.ForeColor = System.Drawing.Color.Snow;
+            this.btnSuatk.Location = new System.Drawing.Point(802, 43);
+            this.btnSuatk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSuatk.Name = "btnSuatk";
+            this.btnSuatk.Size = new System.Drawing.Size(87, 42);
+            this.btnSuatk.TabIndex = 38;
+            this.btnSuatk.Text = "Sửa";
+            this.btnSuatk.UseVisualStyleBackColor = false;
+            this.btnSuatk.Click += new System.EventHandler(this.btnSuatk_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(631, 269);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 23);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Mật khẩu:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(631, 355);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 23);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Chức vụ:";
+            // 
+            // txtMk
+            // 
+            this.txtMk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMk.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMk.Location = new System.Drawing.Point(734, 266);
+            this.txtMk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMk.Name = "txtMk";
+            this.txtMk.Size = new System.Drawing.Size(183, 30);
+            this.txtMk.TabIndex = 36;
+            // 
+            // txtTk
+            // 
+            this.txtTk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTk.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTk.Location = new System.Drawing.Point(734, 183);
+            this.txtTk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTk.Name = "txtTk";
+            this.txtTk.Size = new System.Drawing.Size(183, 30);
+            this.txtTk.TabIndex = 35;
             // 
             // FormQuanlytk
             // 

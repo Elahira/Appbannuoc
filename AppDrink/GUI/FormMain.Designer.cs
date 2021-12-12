@@ -228,7 +228,7 @@ namespace AppDrink.GUI
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(200, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1096, 76);
+            this.panelTitle.Size = new System.Drawing.Size(1028, 76);
             this.panelTitle.TabIndex = 1;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -272,7 +272,7 @@ namespace AppDrink.GUI
             this.iconBtnMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
             this.iconBtnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnMenu.Location = new System.Drawing.Point(991, 0);
+            this.iconBtnMenu.Location = new System.Drawing.Point(923, 0);
             this.iconBtnMenu.Name = "iconBtnMenu";
             this.iconBtnMenu.Size = new System.Drawing.Size(105, 76);
             this.iconBtnMenu.TabIndex = 0;
@@ -290,14 +290,14 @@ namespace AppDrink.GUI
             this.panelDesktop.BackColor = System.Drawing.Color.AliceBlue;
             this.panelDesktop.Location = new System.Drawing.Point(200, 76);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1096, 506);
+            this.panelDesktop.Size = new System.Drawing.Size(1028, 506);
             this.panelDesktop.TabIndex = 2;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 582);
+            this.ClientSize = new System.Drawing.Size(1228, 582);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
