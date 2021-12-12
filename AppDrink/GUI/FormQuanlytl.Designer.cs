@@ -63,6 +63,7 @@ namespace AppDrink.GUI
             // 
             // btnXemloai
             // 
+            this.btnXemloai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXemloai.BackColor = System.Drawing.Color.OrangeRed;
             this.btnXemloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,6 +79,7 @@ namespace AppDrink.GUI
             // 
             // btnSualoai
             // 
+            this.btnSualoai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSualoai.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSualoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSualoai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,6 +95,7 @@ namespace AppDrink.GUI
             // 
             // btnXoaloai
             // 
+            this.btnXoaloai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXoaloai.BackColor = System.Drawing.Color.Crimson;
             this.btnXoaloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,6 +111,7 @@ namespace AppDrink.GUI
             // 
             // txtTentl
             // 
+            this.txtTentl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTentl.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTentl.Location = new System.Drawing.Point(549, 281);
             this.txtTentl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -117,6 +121,7 @@ namespace AppDrink.GUI
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(571, 254);
@@ -127,6 +132,7 @@ namespace AppDrink.GUI
             // 
             // btnThemloai
             // 
+            this.btnThemloai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemloai.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnThemloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,6 +151,7 @@ namespace AppDrink.GUI
             this.dgTheloainuoc.AllowUserToAddRows = false;
             this.dgTheloainuoc.AllowUserToDeleteRows = false;
             this.dgTheloainuoc.AllowUserToOrderColumns = true;
+            this.dgTheloainuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgTheloainuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgTheloainuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idtl,
@@ -174,6 +181,7 @@ namespace AppDrink.GUI
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(12, 9);

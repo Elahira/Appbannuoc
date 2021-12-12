@@ -78,9 +78,10 @@ namespace AppDrink.GUI
             // 
             // DateNv
             // 
+            this.DateNv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DateNv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateNv.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateNv.Location = new System.Drawing.Point(822, 307);
+            this.DateNv.Location = new System.Drawing.Point(822, 310);
             this.DateNv.Margin = new System.Windows.Forms.Padding(4);
             this.DateNv.Name = "DateNv";
             this.DateNv.Size = new System.Drawing.Size(120, 26);
@@ -88,9 +89,10 @@ namespace AppDrink.GUI
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(728, 372);
+            this.label9.Location = new System.Drawing.Point(728, 375);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 19);
@@ -99,9 +101,10 @@ namespace AppDrink.GUI
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(728, 309);
+            this.label8.Location = new System.Drawing.Point(728, 312);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 19);
@@ -110,9 +113,10 @@ namespace AppDrink.GUI
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(728, 246);
+            this.label7.Location = new System.Drawing.Point(728, 249);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 19);
@@ -121,9 +125,10 @@ namespace AppDrink.GUI
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(728, 183);
+            this.label6.Location = new System.Drawing.Point(728, 186);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 19);
@@ -132,13 +137,14 @@ namespace AppDrink.GUI
             // 
             // cbGioitinh
             // 
+            this.cbGioitinh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbGioitinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGioitinh.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGioitinh.FormattingEnabled = true;
             this.cbGioitinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbGioitinh.Location = new System.Drawing.Point(815, 243);
+            this.cbGioitinh.Location = new System.Drawing.Point(815, 246);
             this.cbGioitinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbGioitinh.Name = "cbGioitinh";
             this.cbGioitinh.Size = new System.Drawing.Size(75, 27);
@@ -146,8 +152,9 @@ namespace AppDrink.GUI
             // 
             // txtSdt
             // 
+            this.txtSdt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSdt.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSdt.Location = new System.Drawing.Point(844, 370);
+            this.txtSdt.Location = new System.Drawing.Point(844, 373);
             this.txtSdt.Margin = new System.Windows.Forms.Padding(4);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(133, 27);
@@ -155,8 +162,9 @@ namespace AppDrink.GUI
             // 
             // txtTenNv
             // 
+            this.txtTenNv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTenNv.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNv.Location = new System.Drawing.Point(796, 179);
+            this.txtTenNv.Location = new System.Drawing.Point(796, 182);
             this.txtTenNv.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNv.Name = "txtTenNv";
             this.txtTenNv.Size = new System.Drawing.Size(181, 27);
@@ -164,65 +172,74 @@ namespace AppDrink.GUI
             // 
             // btnXemnv
             // 
+            this.btnXemnv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXemnv.BackColor = System.Drawing.Color.OrangeRed;
             this.btnXemnv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemnv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemnv.ForeColor = System.Drawing.Color.Snow;
-            this.btnXemnv.Location = new System.Drawing.Point(854, 81);
+            this.btnXemnv.Location = new System.Drawing.Point(854, 84);
             this.btnXemnv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXemnv.Name = "btnXemnv";
             this.btnXemnv.Size = new System.Drawing.Size(87, 42);
             this.btnXemnv.TabIndex = 61;
             this.btnXemnv.Text = "Xem";
             this.btnXemnv.UseVisualStyleBackColor = false;
+            this.btnXemnv.Click += new System.EventHandler(this.btnXemNv_Click);
             // 
             // btnSuanv
             // 
+            this.btnSuanv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSuanv.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSuanv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuanv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuanv.ForeColor = System.Drawing.Color.Snow;
-            this.btnSuanv.Location = new System.Drawing.Point(854, 18);
+            this.btnSuanv.Location = new System.Drawing.Point(854, 21);
             this.btnSuanv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSuanv.Name = "btnSuanv";
             this.btnSuanv.Size = new System.Drawing.Size(87, 42);
             this.btnSuanv.TabIndex = 60;
             this.btnSuanv.Text = "Sửa";
             this.btnSuanv.UseVisualStyleBackColor = false;
+            this.btnSuanv.Click += new System.EventHandler(this.btnSuanv_Click);
             // 
             // btnXoanv
             // 
+            this.btnXoanv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXoanv.BackColor = System.Drawing.Color.Crimson;
             this.btnXoanv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoanv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoanv.ForeColor = System.Drawing.Color.Snow;
-            this.btnXoanv.Location = new System.Drawing.Point(761, 81);
+            this.btnXoanv.Location = new System.Drawing.Point(761, 84);
             this.btnXoanv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoanv.Name = "btnXoanv";
             this.btnXoanv.Size = new System.Drawing.Size(87, 42);
             this.btnXoanv.TabIndex = 59;
             this.btnXoanv.Text = "Xóa";
             this.btnXoanv.UseVisualStyleBackColor = false;
+            this.btnXoanv.Click += new System.EventHandler(this.btnXoanv_Click);
             // 
             // btnThemnv
             // 
+            this.btnThemnv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemnv.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnThemnv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemnv.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemnv.ForeColor = System.Drawing.Color.Snow;
-            this.btnThemnv.Location = new System.Drawing.Point(761, 18);
+            this.btnThemnv.Location = new System.Drawing.Point(761, 21);
             this.btnThemnv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemnv.Name = "btnThemnv";
             this.btnThemnv.Size = new System.Drawing.Size(87, 42);
             this.btnThemnv.TabIndex = 58;
             this.btnThemnv.Text = "Thêm";
             this.btnThemnv.UseVisualStyleBackColor = false;
+            this.btnThemnv.Click += new System.EventHandler(this.btnThemnv_Click);
             // 
             // dgNhanvien
             // 
             this.dgNhanvien.AllowUserToAddRows = false;
             this.dgNhanvien.AllowUserToDeleteRows = false;
             this.dgNhanvien.AllowUserToOrderColumns = true;
+            this.dgNhanvien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgNhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idnv,
@@ -230,12 +247,13 @@ namespace AppDrink.GUI
             this.gioitinhnv,
             this.datebirth,
             this.phone});
-            this.dgNhanvien.Location = new System.Drawing.Point(15, 55);
+            this.dgNhanvien.Location = new System.Drawing.Point(15, 58);
             this.dgNhanvien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgNhanvien.Name = "dgNhanvien";
             this.dgNhanvien.ReadOnly = true;
             this.dgNhanvien.Size = new System.Drawing.Size(659, 395);
             this.dgNhanvien.TabIndex = 57;
+            this.dgNhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NhanvienCell_Click);
             // 
             // idnv
             // 
@@ -278,9 +296,10 @@ namespace AppDrink.GUI
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Location = new System.Drawing.Point(12, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 23);
             this.label5.TabIndex = 56;

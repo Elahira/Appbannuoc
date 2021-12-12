@@ -9,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace AppDrink.GUI
 {
-    public partial class FormMain : Form
+    public partial class FormMain : KryptonForm
     {
         private IconButton currentbtn;
         private Panel leftborbtn;

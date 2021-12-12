@@ -24,6 +24,7 @@ namespace AppDrink.GUI
         private void FormQuanlynuoc_Load(object sender, EventArgs e)
         {
             hienthinuocuong();
+            bustln.laydanhsachtheloaicb(cbLoainuoc);
         }
 
         //quản lý nước uống
@@ -81,7 +82,18 @@ namespace AppDrink.GUI
 
         private void btnXoanuoc_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có muốn xóa thông tin nước uống này?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                NuocUong nc = dgNuocuong.CurrentRow.DataBoundItem as NuocUong;
+                int id = nc.IdNuoc;
 
+                if (busnuoc.xoaNuoc(id))
+                {
+                    MessageBox.Show("Sửa thành công!");
+                }
+                else
+                    MessageBox.Show("Sửa không thành công");
+            }
         }
 
         private void NuocCell_Click(object sender, DataGridViewCellEventArgs e)
@@ -93,6 +105,11 @@ namespace AppDrink.GUI
                 txtGiatien.Text = dgNuocuong.Rows[index].Cells["giaTien"].Value.ToString();
                 cbLoainuoc.Text = dgNuocuong.Rows[index].Cells["loaiNuoc"].Value.ToString();
             }
+        }
+
+        private void cbLoainuoc_Click(object sender, EventArgs e)
+        {
+            bustln.laydanhsachtheloaicb(cbLoainuoc);
         }
     }
 }

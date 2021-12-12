@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using AppDrink.BUS;
 
 namespace AppDrink.GUI
 {
-    public partial class FormLogin : Form
+    public partial class FormLogin : KryptonForm
     {
         B_Taikhoan bustk = new B_Taikhoan();
         
