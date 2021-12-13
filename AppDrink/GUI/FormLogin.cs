@@ -41,10 +41,10 @@ namespace AppDrink.GUI
                 else if (bustk.checkloginstaff(txtTk.Text, txtMk.Text))
                 {
                     MessageBox.Show("Đăng nhập thành công");
-                    FormStaff fs = new FormStaff();
+                    FormMain fm = new FormMain();
                     
                     this.Hide();
-                    fs.ShowDialog();
+                    fm.ShowDialog();
                     this.Show();
                 }
 

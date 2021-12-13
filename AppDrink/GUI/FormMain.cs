@@ -24,6 +24,9 @@ namespace AppDrink.GUI
             leftborbtn = new Panel();
             leftborbtn.Size = new Size(7, 65);
             panelMenu.Controls.Add(leftborbtn);
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
         }
 
         public struct RGBcolor

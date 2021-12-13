@@ -89,10 +89,10 @@ namespace AppDrink.GUI
 
                 if (busnuoc.xoaNuoc(id))
                 {
-                    MessageBox.Show("Sửa thành công!");
+                    MessageBox.Show("Xóa thành công!");
                 }
                 else
-                    MessageBox.Show("Sửa không thành công");
+                    MessageBox.Show("Xóa không thành công");
             }
         }
 
