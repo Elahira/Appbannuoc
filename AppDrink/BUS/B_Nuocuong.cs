@@ -17,6 +17,12 @@ namespace AppDrink.BUS
             dg.DataSource = daonuoc.GetNuocUongs().ToList();
         }
 
+        public void laydsnuocvaolist(ListBox ls)
+        {
+            ls.DataSource = daonuoc.GetNuocUongs();
+            ls.DisplayMember = "TenNuoc";
+        }
+
         public bool themNuoc(NuocUong nc)
         {
             return daonuoc.themnuocuong(nc);

@@ -10,21 +10,6 @@ namespace AppDrink.DAO
     {
         AppbannuocEntities db = new AppbannuocEntities();
 
-        /*public dynamic getNuocUongs()
-        {
-            var ds = (from nc in db.NuocUong
-                     from tl in db.TheLoai
-                     where nc.IdTheloai == tl.IdTheloai
-                     select new
-                     {
-                         nc.IdNuoc,
-                         nc.TenNuoc,
-                         nc.Gia,
-                         tl.Tentheloai
-                     }).ToList();
-            return ds;
-        }*/
-
         public List<NuocUong> GetNuocUongs()
         {
             List<NuocUong> dsnc = new List<NuocUong>();

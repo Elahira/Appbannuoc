@@ -142,12 +142,6 @@
     <Compile Include="GUI\FormQuanlytl.Designer.cs">
       <DependentUpon>FormQuanlytl.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormStaff.Designer.cs">
-      <DependentUpon>FormStaff.cs</DependentUpon>
-    </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>DataNuoc.tt</DependentUpon>
     </Compile>
@@ -185,9 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormQuanlytl.resx">
       <DependentUpon>FormQuanlytl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormStaff.resx">
-      <DependentUpon>FormStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

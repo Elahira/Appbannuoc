@@ -164,8 +164,13 @@ namespace AppDrink.GUI
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.StateCommon.Header.Back.Color1 = System.Drawing.Color.DodgerBlue;
+            this.StateCommon.Header.Back.Color1 = System.Drawing.Color.Firebrick;
             this.StateCommon.Header.Back.Color2 = System.Drawing.Color.RoyalBlue;
+            this.StateCommon.Header.Back.ColorAngle = 35F;
+            this.StateCommon.Header.Border.Color1 = System.Drawing.Color.Transparent;
+            this.StateCommon.Header.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.StateCommon.Header.ButtonEdgeInset = 10;
             this.StateCommon.Header.Content.ShortText.Color1 = System.Drawing.Color.WhiteSmoke;
             this.StateCommon.Header.Content.ShortText.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
