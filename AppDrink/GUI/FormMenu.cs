@@ -20,23 +20,22 @@ namespace AppDrink.GUI
         public FormMenu()
         {
             InitializeComponent();
-            busnuoc.laydsnuocvaolist(listMenu);
+            loadtheloai();
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            busnuoc.laydsnuocvaolist(listMenu);
+            loadtheloai();
         }
 
-        private void listMenu_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbTentl_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        public void loadtheloai()
         {
-
+            bustln.laydanhsachtheloaicb(cbTentl);
         }
-
     }
 }

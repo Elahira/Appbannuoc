@@ -29,7 +29,11 @@ namespace AppDrink.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgNuocuong = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cbLoainuoc = new System.Windows.Forms.ComboBox();
             this.txtGiatien = new System.Windows.Forms.TextBox();
             this.txtTennuoc = new System.Windows.Forms.TextBox();
@@ -40,12 +44,11 @@ namespace AppDrink.GUI
             this.btnSuanuoc = new System.Windows.Forms.Button();
             this.btnXoanuoc = new System.Windows.Forms.Button();
             this.btnThemnuoc = new System.Windows.Forms.Button();
-            this.dgNuocuong = new System.Windows.Forms.DataGridView();
-            this.Idnuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
+            this.idNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loaiNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgNuocuong)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +56,7 @@ namespace AppDrink.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dgNuocuong);
             this.panel1.Controls.Add(this.cbLoainuoc);
             this.panel1.Controls.Add(this.txtGiatien);
             this.panel1.Controls.Add(this.txtTennuoc);
@@ -63,13 +67,80 @@ namespace AppDrink.GUI
             this.panel1.Controls.Add(this.btnSuanuoc);
             this.panel1.Controls.Add(this.btnXoanuoc);
             this.panel1.Controls.Add(this.btnThemnuoc);
-            this.panel1.Controls.Add(this.dgNuocuong);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1003, 520);
+            this.panel1.Size = new System.Drawing.Size(967, 506);
             this.panel1.TabIndex = 0;
+            // 
+            // dgNuocuong
+            // 
+            this.dgNuocuong.AllowUserToAddRows = false;
+            this.dgNuocuong.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgNuocuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgNuocuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgNuocuong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgNuocuong.BackgroundColor = System.Drawing.Color.White;
+            this.dgNuocuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgNuocuong.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgNuocuong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgNuocuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgNuocuong.ColumnHeadersHeight = 30;
+            this.dgNuocuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgNuocuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idNuoc,
+            this.tenNuoc,
+            this.giaTien,
+            this.loaiNuoc});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNuocuong.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgNuocuong.EnableHeadersVisualStyles = false;
+            this.dgNuocuong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgNuocuong.Location = new System.Drawing.Point(35, 57);
+            this.dgNuocuong.Name = "dgNuocuong";
+            this.dgNuocuong.ReadOnly = true;
+            this.dgNuocuong.RowHeadersVisible = false;
+            this.dgNuocuong.RowTemplate.Height = 45;
+            this.dgNuocuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgNuocuong.Size = new System.Drawing.Size(594, 398);
+            this.dgNuocuong.TabIndex = 66;
+            this.dgNuocuong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgNuocuong.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgNuocuong.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgNuocuong.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgNuocuong.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgNuocuong.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgNuocuong.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgNuocuong.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgNuocuong.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgNuocuong.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgNuocuong.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgNuocuong.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgNuocuong.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgNuocuong.ThemeStyle.ReadOnly = true;
+            this.dgNuocuong.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgNuocuong.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgNuocuong.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgNuocuong.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgNuocuong.ThemeStyle.RowsStyle.Height = 45;
+            this.dgNuocuong.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgNuocuong.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgNuocuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NuocCell_Click);
             // 
             // cbLoainuoc
             // 
@@ -141,6 +212,7 @@ namespace AppDrink.GUI
             // 
             // btnXemnuoc
             // 
+            this.btnXemnuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXemnuoc.BackColor = System.Drawing.Color.OrangeRed;
             this.btnXemnuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemnuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,6 +228,7 @@ namespace AppDrink.GUI
             // 
             // btnSuanuoc
             // 
+            this.btnSuanuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSuanuoc.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSuanuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuanuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,6 +244,7 @@ namespace AppDrink.GUI
             // 
             // btnXoanuoc
             // 
+            this.btnXoanuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXoanuoc.BackColor = System.Drawing.Color.Crimson;
             this.btnXoanuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoanuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,6 +260,7 @@ namespace AppDrink.GUI
             // 
             // btnThemnuoc
             // 
+            this.btnThemnuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemnuoc.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnThemnuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemnuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,57 +274,6 @@ namespace AppDrink.GUI
             this.btnThemnuoc.UseVisualStyleBackColor = false;
             this.btnThemnuoc.Click += new System.EventHandler(this.btnThemnuoc_Click);
             // 
-            // dgNuocuong
-            // 
-            this.dgNuocuong.AllowUserToAddRows = false;
-            this.dgNuocuong.AllowUserToDeleteRows = false;
-            this.dgNuocuong.AllowUserToOrderColumns = true;
-            this.dgNuocuong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgNuocuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgNuocuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Idnuoc,
-            this.tenNuoc,
-            this.giaTien,
-            this.loaiNuoc});
-            this.dgNuocuong.Location = new System.Drawing.Point(22, 57);
-            this.dgNuocuong.Margin = new System.Windows.Forms.Padding(4);
-            this.dgNuocuong.Name = "dgNuocuong";
-            this.dgNuocuong.ReadOnly = true;
-            this.dgNuocuong.Size = new System.Drawing.Size(622, 405);
-            this.dgNuocuong.TabIndex = 55;
-            this.dgNuocuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NuocCell_Click);
-            // 
-            // Idnuoc
-            // 
-            this.Idnuoc.DataPropertyName = "IdNuoc";
-            this.Idnuoc.HeaderText = "ID";
-            this.Idnuoc.Name = "Idnuoc";
-            this.Idnuoc.ReadOnly = true;
-            this.Idnuoc.Width = 70;
-            // 
-            // tenNuoc
-            // 
-            this.tenNuoc.DataPropertyName = "TenNuoc";
-            this.tenNuoc.HeaderText = "Tên nước uống";
-            this.tenNuoc.Name = "tenNuoc";
-            this.tenNuoc.ReadOnly = true;
-            this.tenNuoc.Width = 150;
-            // 
-            // giaTien
-            // 
-            this.giaTien.DataPropertyName = "Gia";
-            this.giaTien.HeaderText = "Giá tiền";
-            this.giaTien.Name = "giaTien";
-            this.giaTien.ReadOnly = true;
-            this.giaTien.Width = 150;
-            // 
-            // loaiNuoc
-            // 
-            this.loaiNuoc.DataPropertyName = "Tentheloai";
-            this.loaiNuoc.HeaderText = "Loại nước";
-            this.loaiNuoc.Name = "loaiNuoc";
-            this.loaiNuoc.ReadOnly = true;
-            // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -262,11 +286,40 @@ namespace AppDrink.GUI
             this.label10.TabIndex = 54;
             this.label10.Text = "Danh sách nước uống";
             // 
+            // idNuoc
+            // 
+            this.idNuoc.DataPropertyName = "IdNuoc";
+            this.idNuoc.FillWeight = 90F;
+            this.idNuoc.HeaderText = "ID";
+            this.idNuoc.Name = "idNuoc";
+            this.idNuoc.ReadOnly = true;
+            // 
+            // tenNuoc
+            // 
+            this.tenNuoc.DataPropertyName = "TenNuoc";
+            this.tenNuoc.HeaderText = "Nước";
+            this.tenNuoc.Name = "tenNuoc";
+            this.tenNuoc.ReadOnly = true;
+            // 
+            // giaTien
+            // 
+            this.giaTien.DataPropertyName = "Gia";
+            this.giaTien.HeaderText = "Giá";
+            this.giaTien.Name = "giaTien";
+            this.giaTien.ReadOnly = true;
+            // 
+            // loaiNuoc
+            // 
+            this.loaiNuoc.DataPropertyName = "Tentheloai";
+            this.loaiNuoc.HeaderText = "Loại nước";
+            this.loaiNuoc.Name = "loaiNuoc";
+            this.loaiNuoc.ReadOnly = true;
+            // 
             // FormQuanlynuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 520);
+            this.ClientSize = new System.Drawing.Size(967, 506);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -293,11 +346,11 @@ namespace AppDrink.GUI
         private System.Windows.Forms.Button btnSuanuoc;
         private System.Windows.Forms.Button btnXoanuoc;
         private System.Windows.Forms.Button btnThemnuoc;
-        private System.Windows.Forms.DataGridView dgNuocuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Idnuoc;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2DataGridView dgNuocuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idNuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiNuoc;
-        private System.Windows.Forms.Label label10;
     }
 }

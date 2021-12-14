@@ -38,16 +38,18 @@ namespace AppDrink.GUI
             this.btnTaikhoan = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.TitleChild = new System.Windows.Forms.Label();
-            this.iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
-            this.iconBtnMenu = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.iconBtnMenu = new FontAwesome.Sharp.IconButton();
+            this.iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
+            this.panelTitle = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.TitleChild = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).BeginInit();
+            this.panelTitle.SuspendLayout();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -219,49 +221,19 @@ namespace AppDrink.GUI
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panelTitle
+            // panelDesktop
             // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(146)))), ((int)(((byte)(248)))));
-            this.panelTitle.Controls.Add(this.TitleChild);
-            this.panelTitle.Controls.Add(this.iconCurrentChild);
-            this.panelTitle.Controls.Add(this.iconBtnMenu);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(200, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1028, 76);
-            this.panelTitle.TabIndex = 1;
-            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
-            // 
-            // TitleChild
-            // 
-            this.TitleChild.AutoSize = true;
-            this.TitleChild.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleChild.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TitleChild.Location = new System.Drawing.Point(56, 33);
-            this.TitleChild.Name = "TitleChild";
-            this.TitleChild.Size = new System.Drawing.Size(51, 19);
-            this.TitleChild.TabIndex = 2;
-            this.TitleChild.Text = "Home";
-            // 
-            // iconCurrentChild
-            // 
-            this.iconCurrentChild.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.iconCurrentChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(146)))), ((int)(((byte)(248)))));
-            this.iconCurrentChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
-            this.iconCurrentChild.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChild.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
-            this.iconCurrentChild.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChild.IconSize = 41;
-            this.iconCurrentChild.Location = new System.Drawing.Point(6, 21);
-            this.iconCurrentChild.Name = "iconCurrentChild";
-            this.iconCurrentChild.Size = new System.Drawing.Size(44, 41);
-            this.iconCurrentChild.TabIndex = 1;
-            this.iconCurrentChild.TabStop = false;
+            this.panelDesktop.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(0, 70);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1028, 512);
+            this.panelDesktop.TabIndex = 2;
             // 
             // iconBtnMenu
             // 
-            this.iconBtnMenu.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.iconBtnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
+            this.iconBtnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.iconBtnMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconBtnMenu.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.iconBtnMenu.FlatAppearance.BorderSize = 0;
@@ -269,48 +241,94 @@ namespace AppDrink.GUI
             this.iconBtnMenu.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconBtnMenu.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.iconBtnMenu.IconChar = FontAwesome.Sharp.IconChar.Store;
-            this.iconBtnMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            this.iconBtnMenu.IconColor = System.Drawing.Color.DodgerBlue;
             this.iconBtnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnMenu.IconSize = 45;
             this.iconBtnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnMenu.Location = new System.Drawing.Point(923, 0);
+            this.iconBtnMenu.Location = new System.Drawing.Point(927, 0);
             this.iconBtnMenu.Name = "iconBtnMenu";
-            this.iconBtnMenu.Size = new System.Drawing.Size(105, 76);
+            this.iconBtnMenu.Size = new System.Drawing.Size(101, 70);
             this.iconBtnMenu.TabIndex = 0;
             this.iconBtnMenu.Text = "Menu";
             this.iconBtnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnMenu.UseVisualStyleBackColor = true;
+            this.iconBtnMenu.UseVisualStyleBackColor = false;
             this.iconBtnMenu.Click += new System.EventHandler(this.btnMenu);
             // 
-            // panelDesktop
+            // iconCurrentChild
             // 
-            this.panelDesktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDesktop.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelDesktop.Location = new System.Drawing.Point(200, 76);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1028, 506);
-            this.panelDesktop.TabIndex = 2;
+            this.iconCurrentChild.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.iconCurrentChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(127)))), ((int)(((byte)(187)))));
+            this.iconCurrentChild.ForeColor = System.Drawing.Color.Crimson;
+            this.iconCurrentChild.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrentChild.IconColor = System.Drawing.Color.Crimson;
+            this.iconCurrentChild.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChild.IconSize = 44;
+            this.iconCurrentChild.Location = new System.Drawing.Point(6, 12);
+            this.iconCurrentChild.Name = "iconCurrentChild";
+            this.iconCurrentChild.Size = new System.Drawing.Size(44, 47);
+            this.iconCurrentChild.TabIndex = 1;
+            this.iconCurrentChild.TabStop = false;
+            // 
+            // panelTitle
+            // 
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(76)))), ((int)(((byte)(92)))));
+            this.panelTitle.Controls.Add(this.TitleChild);
+            this.panelTitle.Controls.Add(this.iconBtnMenu);
+            this.panelTitle.Controls.Add(this.iconCurrentChild);
+            this.panelTitle.CustomizableEdges.BottomLeft = false;
+            this.panelTitle.CustomizableEdges.TopRight = false;
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.FillColor = System.Drawing.Color.Navy;
+            this.panelTitle.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
+            this.panelTitle.Size = new System.Drawing.Size(1028, 70);
+            this.panelTitle.TabIndex = 0;
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            // 
+            // TitleChild
+            // 
+            this.TitleChild.AutoSize = true;
+            this.TitleChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(127)))), ((int)(((byte)(187)))));
+            this.TitleChild.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleChild.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TitleChild.Location = new System.Drawing.Point(56, 26);
+            this.TitleChild.Name = "TitleChild";
+            this.TitleChild.Size = new System.Drawing.Size(51, 19);
+            this.TitleChild.TabIndex = 2;
+            this.TitleChild.Text = "Home";
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.panelDesktop);
+            this.guna2CustomGradientPanel1.Controls.Add(this.panelTitle);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(200, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1028, 582);
+            this.guna2CustomGradientPanel1.TabIndex = 3;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 582);
-            this.Controls.Add(this.panelDesktop);
-            this.Controls.Add(this.panelTitle);
+            this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.panelMenu);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.StateCommon.Back.ColorAngle = 135F;
             this.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.StateCommon.Border.Rounding = 10;
             this.StateCommon.Border.Width = 1;
-            this.StateCommon.Header.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(143)))), ((int)(((byte)(249)))));
+            this.StateCommon.Header.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.StateCommon.Header.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(143)))), ((int)(((byte)(249)))));
             this.StateCommon.Header.Back.ColorAngle = 35F;
             this.StateCommon.Header.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.StateCommon.Header.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -322,31 +340,34 @@ namespace AppDrink.GUI
             this.StateCommon.Header.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.StateCommon.Header.Content.ShortText.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Text = "FormMain";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).EndInit();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panelLogo;
-        private FontAwesome.Sharp.IconButton btnTaikhoan;
+        public FontAwesome.Sharp.IconButton btnTaikhoan;
         private FontAwesome.Sharp.IconButton btnThongke;
         private FontAwesome.Sharp.IconButton btnTheloai;
         private FontAwesome.Sharp.IconButton btnNuoc;
-        private FontAwesome.Sharp.IconButton btnNhanvien;
-        private System.Windows.Forms.Panel panelTitle;
+        public FontAwesome.Sharp.IconButton btnNhanvien;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel panelLogo;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelTitle;
         private FontAwesome.Sharp.IconButton iconBtnMenu;
         private System.Windows.Forms.Label TitleChild;
         private FontAwesome.Sharp.IconPictureBox iconCurrentChild;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.Panel panelDesktop;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
     }
 }

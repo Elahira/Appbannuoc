@@ -148,7 +148,7 @@ namespace AppDrink.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(539, 441);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.btnThoat);
@@ -163,7 +163,12 @@ namespace AppDrink.GUI
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StateCommon.Border.Rounding = 10;
             this.StateCommon.Header.Back.Color1 = System.Drawing.Color.Firebrick;
             this.StateCommon.Header.Back.Color2 = System.Drawing.Color.RoyalBlue;
             this.StateCommon.Header.Back.ColorAngle = 35F;

@@ -42,7 +42,8 @@ namespace AppDrink.GUI
                 {
                     MessageBox.Show("Đăng nhập thành công");
                     FormMain fm = new FormMain();
-                    
+                    fm.btnNhanvien.Visible = false;
+                    fm.btnTaikhoan.Visible = false;
                     this.Hide();
                     fm.ShowDialog();
                     this.Show();

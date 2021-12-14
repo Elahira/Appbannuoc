@@ -24,9 +24,9 @@ namespace AppDrink.GUI
             leftborbtn = new Panel();
             leftborbtn.Size = new Size(7, 65);
             panelMenu.Controls.Add(leftborbtn);
-            this.Text = string.Empty;
+            /*this.Text = string.Empty;
             this.ControlBox = false;
-            this.DoubleBuffered = true;
+            this.DoubleBuffered = true;*/
         }
 
         public struct RGBcolor
@@ -155,6 +155,17 @@ namespace AppDrink.GUI
             this.Hide();
             fmenu.ShowDialog();
             this.Show();
+        }
+
+        private void panelTitle_MouseDown1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

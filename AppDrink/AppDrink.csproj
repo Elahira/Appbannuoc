@@ -78,11 +78,13 @@
     <Compile Include="BUS\B_Nhanvien.cs" />
     <Compile Include="BUS\B_Nuocuong.cs" />
     <Compile Include="BUS\B_Taikhoan.cs" />
+    <Compile Include="BUS\B_Thanhtoan.cs" />
     <Compile Include="BUS\B_Theloai.cs" />
     <Compile Include="BUS\B_Thongke.cs" />
     <Compile Include="DAO\D_Nhanvien.cs" />
     <Compile Include="DAO\D_Nuocuong.cs" />
     <Compile Include="DAO\D_Taikhoan.cs" />
+    <Compile Include="DAO\D_Thanhtoan.cs" />
     <Compile Include="DAO\D_Theloai.cs" />
     <Compile Include="DAO\D_Thongke.cs" />
     <Compile Include="DataNuoc.Context.cs">
@@ -141,6 +143,12 @@
     </Compile>
     <Compile Include="GUI\FormQuanlytl.Designer.cs">
       <DependentUpon>FormQuanlytl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormThongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThongke.Designer.cs">
+      <DependentUpon>FormThongke.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>DataNuoc.tt</DependentUpon>

@@ -29,13 +29,16 @@ namespace AppDrink.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelChucnang = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgTaikhoan = new System.Windows.Forms.DataGridView();
+            this.dgTaikhoan = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Idtk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tkuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mkpass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cvtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnXoatk = new System.Windows.Forms.Button();
             this.listCv = new System.Windows.Forms.ComboBox();
             this.btnThemtk = new System.Windows.Forms.Button();
@@ -53,8 +56,8 @@ namespace AppDrink.GUI
             // panelChucnang
             // 
             this.panelChucnang.BackColor = System.Drawing.Color.White;
-            this.panelChucnang.Controls.Add(this.label1);
             this.panelChucnang.Controls.Add(this.dgTaikhoan);
+            this.panelChucnang.Controls.Add(this.label1);
             this.panelChucnang.Controls.Add(this.btnXoatk);
             this.panelChucnang.Controls.Add(this.listCv);
             this.panelChucnang.Controls.Add(this.btnThemtk);
@@ -69,8 +72,103 @@ namespace AppDrink.GUI
             this.panelChucnang.Location = new System.Drawing.Point(0, 0);
             this.panelChucnang.Margin = new System.Windows.Forms.Padding(4);
             this.panelChucnang.Name = "panelChucnang";
-            this.panelChucnang.Size = new System.Drawing.Size(969, 486);
+            this.panelChucnang.Size = new System.Drawing.Size(969, 502);
             this.panelChucnang.TabIndex = 41;
+            // 
+            // dgTaikhoan
+            // 
+            this.dgTaikhoan.AllowUserToAddRows = false;
+            this.dgTaikhoan.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgTaikhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgTaikhoan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgTaikhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgTaikhoan.BackgroundColor = System.Drawing.Color.White;
+            this.dgTaikhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgTaikhoan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgTaikhoan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgTaikhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgTaikhoan.ColumnHeadersHeight = 30;
+            this.dgTaikhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Idtk,
+            this.Tkuser,
+            this.Mkpass,
+            this.Cvtype});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgTaikhoan.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgTaikhoan.EnableHeadersVisualStyles = false;
+            this.dgTaikhoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgTaikhoan.Location = new System.Drawing.Point(16, 43);
+            this.dgTaikhoan.Name = "dgTaikhoan";
+            this.dgTaikhoan.ReadOnly = true;
+            this.dgTaikhoan.RowHeadersVisible = false;
+            this.dgTaikhoan.RowTemplate.Height = 45;
+            this.dgTaikhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgTaikhoan.Size = new System.Drawing.Size(594, 398);
+            this.dgTaikhoan.TabIndex = 41;
+            this.dgTaikhoan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgTaikhoan.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgTaikhoan.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgTaikhoan.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgTaikhoan.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgTaikhoan.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgTaikhoan.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgTaikhoan.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgTaikhoan.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgTaikhoan.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgTaikhoan.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgTaikhoan.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgTaikhoan.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgTaikhoan.ThemeStyle.ReadOnly = true;
+            this.dgTaikhoan.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgTaikhoan.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgTaikhoan.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgTaikhoan.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgTaikhoan.ThemeStyle.RowsStyle.Height = 45;
+            this.dgTaikhoan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgTaikhoan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgTaikhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tk_cellclick);
+            // 
+            // Idtk
+            // 
+            this.Idtk.DataPropertyName = "IdTK";
+            this.Idtk.HeaderText = "ID";
+            this.Idtk.Name = "Idtk";
+            this.Idtk.ReadOnly = true;
+            // 
+            // Tkuser
+            // 
+            this.Tkuser.DataPropertyName = "Taikhoan";
+            this.Tkuser.HeaderText = "Tài khoản";
+            this.Tkuser.Name = "Tkuser";
+            this.Tkuser.ReadOnly = true;
+            // 
+            // Mkpass
+            // 
+            this.Mkpass.DataPropertyName = "Matkhau";
+            this.Mkpass.HeaderText = "Mật Khẩu";
+            this.Mkpass.Name = "Mkpass";
+            this.Mkpass.ReadOnly = true;
+            // 
+            // Cvtype
+            // 
+            this.Cvtype.DataPropertyName = "Chucvu";
+            this.Cvtype.HeaderText = "Chức vụ";
+            this.Cvtype.Name = "Cvtype";
+            this.Cvtype.ReadOnly = true;
             // 
             // label1
             // 
@@ -83,57 +181,6 @@ namespace AppDrink.GUI
             this.label1.Size = new System.Drawing.Size(160, 23);
             this.label1.TabIndex = 29;
             this.label1.Text = "Danh sách tài khoản";
-            // 
-            // dgTaikhoan
-            // 
-            this.dgTaikhoan.AllowUserToAddRows = false;
-            this.dgTaikhoan.AllowUserToDeleteRows = false;
-            this.dgTaikhoan.AllowUserToOrderColumns = true;
-            this.dgTaikhoan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgTaikhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTaikhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Idtk,
-            this.Tkuser,
-            this.Mkpass,
-            this.Cvtype});
-            this.dgTaikhoan.Location = new System.Drawing.Point(12, 52);
-            this.dgTaikhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgTaikhoan.Name = "dgTaikhoan";
-            this.dgTaikhoan.ReadOnly = true;
-            this.dgTaikhoan.Size = new System.Drawing.Size(603, 367);
-            this.dgTaikhoan.TabIndex = 30;
-            this.dgTaikhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tk_cellclick);
-            // 
-            // Idtk
-            // 
-            this.Idtk.DataPropertyName = "IdTk";
-            this.Idtk.HeaderText = "ID";
-            this.Idtk.Name = "Idtk";
-            this.Idtk.ReadOnly = true;
-            this.Idtk.Width = 80;
-            // 
-            // Tkuser
-            // 
-            this.Tkuser.DataPropertyName = "Taikhoan";
-            this.Tkuser.HeaderText = "Tài khoản";
-            this.Tkuser.Name = "Tkuser";
-            this.Tkuser.ReadOnly = true;
-            this.Tkuser.Width = 150;
-            // 
-            // Mkpass
-            // 
-            this.Mkpass.DataPropertyName = "Matkhau";
-            this.Mkpass.HeaderText = "Mật khẩu";
-            this.Mkpass.Name = "Mkpass";
-            this.Mkpass.ReadOnly = true;
-            this.Mkpass.Width = 150;
-            // 
-            // Cvtype
-            // 
-            this.Cvtype.DataPropertyName = "Chucvu";
-            this.Cvtype.HeaderText = "Chức vụ";
-            this.Cvtype.Name = "Cvtype";
-            this.Cvtype.ReadOnly = true;
             // 
             // btnXoatk
             // 
@@ -271,7 +318,7 @@ namespace AppDrink.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 486);
+            this.ClientSize = new System.Drawing.Size(969, 502);
             this.Controls.Add(this.panelChucnang);
             this.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -289,11 +336,6 @@ namespace AppDrink.GUI
 
         private System.Windows.Forms.Panel panelChucnang;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgTaikhoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Idtk;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tkuser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mkpass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cvtype;
         private System.Windows.Forms.Button btnXoatk;
         private System.Windows.Forms.ComboBox listCv;
         private System.Windows.Forms.Button btnThemtk;
@@ -304,5 +346,10 @@ namespace AppDrink.GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMk;
         private System.Windows.Forms.TextBox txtTk;
+        private Guna.UI2.WinForms.Guna2DataGridView dgTaikhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Idtk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tkuser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mkpass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cvtype;
     }
 }
