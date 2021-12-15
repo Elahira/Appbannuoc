@@ -17,7 +17,7 @@ namespace AppDrink
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NuocUong()
         {
-            this.HoaDon = new HashSet<HoaDon>();
+            this.ChiTiethd = new HashSet<ChiTiethd>();
         }
     
         public int IdNuoc { get; set; }
@@ -25,9 +25,9 @@ namespace AppDrink
         public Nullable<double> Gia { get; set; }
         public Nullable<int> IdTheloai { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDon { get; set; }
         public virtual TheLoai TheLoai { get; set; }
-        public string Tentheloai { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTiethd> ChiTiethd { get; set; }
+        public string Tentheloai { get; internal set; }
     }
 }

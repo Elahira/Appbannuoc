@@ -38,9 +38,14 @@ namespace AppDrink.BUS
             return daonuoc.xoanuocuong(manuoc);
         }
 
-        public void sorttheotl(String tentl, DataGridView dg)
+        public void filtertheotl(String tentl, DataGridView dg)
         {
-            dg.DataSource = daonuoc.sorttheotl(tentl).ToList();
+            dg.DataSource = daonuoc.filtertheotl(tentl).ToList();
+        }
+
+        public int getmanuoc(String tennuoc)
+        {
+            return daonuoc.getManuoc(tennuoc);
         }
 
     }

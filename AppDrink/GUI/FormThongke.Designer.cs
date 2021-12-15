@@ -37,7 +37,7 @@ namespace AppDrink.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 502);
             this.Name = "FormThongke";
-            this.Text = "FormThongke";
+            this.Text = "Thống kê";
             this.ResumeLayout(false);
 
         }

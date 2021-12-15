@@ -16,7 +16,7 @@ namespace AppDrink.DAO
             var dstl = (from tl in db.TheLoai select tl).ToList();
             return dstl;
         }
-
+        //lấy id thể loại dựa vào tên thể loại
         public int getMatheloai(String tentheloai)
         {
             var tln = from tl in db.TheLoai

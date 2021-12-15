@@ -29,7 +29,9 @@ namespace AppDrink.DAO
             return dsnc;
         }
 
-        public List<NuocUong> sorttheotl(String tentl)
+
+        //lọc sản phẩm theo thể loại
+        public List<NuocUong> filtertheotl(String tentl)
         {
             List<NuocUong> dsnc = new List<NuocUong>();
             var ds = from nc in db.NuocUong
@@ -80,6 +82,16 @@ namespace AppDrink.DAO
                 db.SaveChanges();
             }
             return true;
+        }
+
+        //lấy mã nước theo tên nước
+        public int getManuoc(String tennuoc)
+        {
+            var nuoc = from nc in db.NuocUong
+                      where nc.TenNuoc == tennuoc
+                      select new { nc.IdNuoc };
+            int mnc = nuoc.First().IdNuoc;
+            return mnc;
         }
     }
 }

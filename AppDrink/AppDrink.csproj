@@ -81,6 +81,9 @@
     <Compile Include="BUS\B_Thanhtoan.cs" />
     <Compile Include="BUS\B_Theloai.cs" />
     <Compile Include="BUS\B_Thongke.cs" />
+    <Compile Include="ChiTiethd.cs">
+      <DependentUpon>DataNuoc.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAO\D_Nhanvien.cs" />
     <Compile Include="DAO\D_Nuocuong.cs" />
     <Compile Include="DAO\D_Taikhoan.cs" />

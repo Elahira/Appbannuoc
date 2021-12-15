@@ -5,16 +5,24 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="AppbannuocModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ChiTiethd">
+          <Key>
+            <PropertyRef Name="IdChitiet" />
+          </Key>
+          <Property Name="IdChitiet" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdNuoc" Type="int" />
+          <Property Name="Soluong" Type="int" />
+          <Property Name="Thanhtien" Type="float" />
+          <Property Name="IdHoadon" Type="int" />
+        </EntityType>
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="IdHoadon" />
           </Key>
           <Property Name="IdHoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IdNuoc" Type="int" />
           <Property Name="NgayLap" Type="date" />
           <Property Name="IdNhanvien" Type="int" />
-          <Property Name="Soluong" Type="int" />
-          <Property Name="Thanhtien" Type="float" />
+          <Property Name="TongCong" Type="float" />
         </EntityType>
         <EntityType Name="NuocUong">
           <Key>
@@ -51,14 +59,26 @@
           <Property Name="IdTheloai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Tentheloai" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK_HoaDon_NuocUong">
+        <Association Name="FK_ChiTiethd_HoaDon">
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="0..1" />
+          <End Role="ChiTiethd" Type="Self.ChiTiethd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDon">
+              <PropertyRef Name="IdHoadon" />
+            </Principal>
+            <Dependent Role="ChiTiethd">
+              <PropertyRef Name="IdHoadon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTiethd_NuocUong">
           <End Role="NuocUong" Type="Self.NuocUong" Multiplicity="0..1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <End Role="ChiTiethd" Type="Self.ChiTiethd" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NuocUong">
               <PropertyRef Name="IdNuoc" />
             </Principal>
-            <Dependent Role="HoaDon">
+            <Dependent Role="ChiTiethd">
               <PropertyRef Name="IdNuoc" />
             </Dependent>
           </ReferentialConstraint>
@@ -88,14 +108,19 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="AppbannuocModelStoreContainer">
+          <EntitySet Name="ChiTiethd" EntityType="Self.ChiTiethd" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NuocUong" EntityType="Self.NuocUong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TheLoai" EntityType="Self.TheLoai" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_HoaDon_NuocUong" Association="Self.FK_HoaDon_NuocUong">
-            <End Role="NuocUong" EntitySet="NuocUong" />
+          <AssociationSet Name="FK_ChiTiethd_HoaDon" Association="Self.FK_ChiTiethd_HoaDon">
             <End Role="HoaDon" EntitySet="HoaDon" />
+            <End Role="ChiTiethd" EntitySet="ChiTiethd" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTiethd_NuocUong" Association="Self.FK_ChiTiethd_NuocUong">
+            <End Role="NuocUong" EntitySet="NuocUong" />
+            <End Role="ChiTiethd" EntitySet="ChiTiethd" />
           </AssociationSet>
           <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
             <End Role="NhanVien" EntitySet="NhanVien" />
@@ -115,13 +140,11 @@
             <PropertyRef Name="IdHoadon" />
           </Key>
           <Property Name="IdHoadon" Type="Int32" Nullable="false" />
-          <Property Name="IdNuoc" Type="Int32" />
           <Property Name="NgayLap" Type="DateTime" Precision="0" />
           <Property Name="IdNhanvien" Type="Int32" />
-          <NavigationProperty Name="NuocUong" Relationship="Self.FK_HoaDon_NuocUong" FromRole="HoaDon" ToRole="NuocUong" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
-          <Property Name="Soluong" Type="Int32" />
-          <Property Name="Thanhtien" Type="Double" />
+          <Property Name="TongCong" Type="Double" />
+          <NavigationProperty Name="ChiTiethd" Relationship="AppbannuocModel.FK_ChiTiethd_HoaDon" FromRole="HoaDon" ToRole="ChiTiethd" />
         </EntityType>
         <EntityType Name="NuocUong">
           <Key>
@@ -131,8 +154,8 @@
           <Property Name="TenNuoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Gia" Type="Double" />
           <Property Name="IdTheloai" Type="Int32" />
-          <NavigationProperty Name="HoaDon" Relationship="Self.FK_HoaDon_NuocUong" FromRole="NuocUong" ToRole="HoaDon" />
           <NavigationProperty Name="TheLoai" Relationship="Self.FK_NuocUong_TheLoai" FromRole="NuocUong" ToRole="TheLoai" />
+          <NavigationProperty Name="ChiTiethd" Relationship="AppbannuocModel.FK_ChiTiethd_NuocUong" FromRole="NuocUong" ToRole="ChiTiethd" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -162,18 +185,6 @@
           <Property Name="Tentheloai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NuocUong" Relationship="Self.FK_NuocUong_TheLoai" FromRole="TheLoai" ToRole="NuocUong" />
         </EntityType>
-        <Association Name="FK_HoaDon_NuocUong">
-          <End Role="NuocUong" Type="Self.NuocUong" Multiplicity="0..1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NuocUong">
-              <PropertyRef Name="IdNuoc" />
-            </Principal>
-            <Dependent Role="HoaDon">
-              <PropertyRef Name="IdNuoc" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_HoaDon_NhanVien">
           <End Type="Self.NhanVien" Multiplicity="0..1" Role="NhanVien" />
           <End Type="Self.HoaDon" Multiplicity="*" Role="HoaDon" />
@@ -204,10 +215,6 @@
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" />
           <EntitySet Name="TheLoai" EntityType="Self.TheLoai" />
-          <AssociationSet Name="FK_HoaDon_NuocUong" Association="Self.FK_HoaDon_NuocUong">
-            <End Role="NuocUong" EntitySet="NuocUong" />
-            <End Role="HoaDon" EntitySet="HoaDon" />
-          </AssociationSet>
           <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
             <End EntitySet="NhanVien" Role="NhanVien" />
             <End EntitySet="HoaDon" Role="HoaDon" />
@@ -216,7 +223,52 @@
             <End Role="TheLoai" EntitySet="TheLoai" />
             <End Role="NuocUong" EntitySet="NuocUong" />
           </AssociationSet>
+          <EntitySet Name="ChiTiethd" EntityType="AppbannuocModel.ChiTiethd" />
+          <AssociationSet Name="FK_ChiTiethd_HoaDon" Association="AppbannuocModel.FK_ChiTiethd_HoaDon">
+            <End Role="HoaDon" EntitySet="HoaDon" />
+            <End Role="ChiTiethd" EntitySet="ChiTiethd" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTiethd_NuocUong" Association="AppbannuocModel.FK_ChiTiethd_NuocUong">
+            <End Role="NuocUong" EntitySet="NuocUong" />
+            <End Role="ChiTiethd" EntitySet="ChiTiethd" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="ChiTiethd">
+          <Key>
+            <PropertyRef Name="IdChitiet" />
+          </Key>
+          <Property Name="IdChitiet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdNuoc" Type="Int32" />
+          <Property Name="Soluong" Type="Int32" />
+          <Property Name="Thanhtien" Type="Double" />
+          <Property Name="IdHoadon" Type="Int32" />
+          <NavigationProperty Name="HoaDon" Relationship="AppbannuocModel.FK_ChiTiethd_HoaDon" FromRole="ChiTiethd" ToRole="HoaDon" />
+          <NavigationProperty Name="NuocUong" Relationship="AppbannuocModel.FK_ChiTiethd_NuocUong" FromRole="ChiTiethd" ToRole="NuocUong" />
+        </EntityType>
+        <Association Name="FK_ChiTiethd_HoaDon">
+          <End Type="AppbannuocModel.HoaDon" Role="HoaDon" Multiplicity="0..1" />
+          <End Type="AppbannuocModel.ChiTiethd" Role="ChiTiethd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDon">
+              <PropertyRef Name="IdHoadon" />
+            </Principal>
+            <Dependent Role="ChiTiethd">
+              <PropertyRef Name="IdHoadon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTiethd_NuocUong">
+          <End Type="AppbannuocModel.NuocUong" Role="NuocUong" Multiplicity="0..1" />
+          <End Type="AppbannuocModel.ChiTiethd" Role="ChiTiethd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NuocUong">
+              <PropertyRef Name="IdNuoc" />
+            </Principal>
+            <Dependent Role="ChiTiethd">
+              <PropertyRef Name="IdNuoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -226,10 +278,8 @@
           <EntitySetMapping Name="HoaDon">
             <EntityTypeMapping TypeName="AppbannuocModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
-                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
-                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="TongCong" ColumnName="TongCong" />
                 <ScalarProperty Name="IdHoadon" ColumnName="IdHoadon" />
-                <ScalarProperty Name="IdNuoc" ColumnName="IdNuoc" />
                 <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="IdNhanvien" ColumnName="IdNhanvien" />
               </MappingFragment>
@@ -271,6 +321,17 @@
               <MappingFragment StoreEntitySet="TheLoai">
                 <ScalarProperty Name="IdTheloai" ColumnName="IdTheloai" />
                 <ScalarProperty Name="Tentheloai" ColumnName="Tentheloai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTiethd">
+            <EntityTypeMapping TypeName="AppbannuocModel.ChiTiethd">
+              <MappingFragment StoreEntitySet="ChiTiethd">
+                <ScalarProperty Name="IdHoadon" ColumnName="IdHoadon" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="IdNuoc" ColumnName="IdNuoc" />
+                <ScalarProperty Name="IdChitiet" ColumnName="IdChitiet" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

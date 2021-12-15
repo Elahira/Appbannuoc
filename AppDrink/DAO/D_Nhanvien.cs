@@ -62,5 +62,14 @@ namespace AppDrink.DAO
             }
             return true;
         }
+
+        public int getManv(String tennv)
+        {
+            var dsnv = from nv in db.NhanVien
+                       where nv.Hoten == tennv
+                       select new { nv.IdNhanvien };
+            int mnv = dsnv.First().IdNhanvien;
+            return mnv;
+        }
     }
 }

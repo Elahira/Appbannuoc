@@ -14,14 +14,19 @@ namespace AppDrink
     
     public partial class HoaDon
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HoaDon()
+        {
+            this.ChiTiethd = new HashSet<ChiTiethd>();
+        }
+    
         public int IdHoadon { get; set; }
-        public Nullable<int> IdNuoc { get; set; }
         public Nullable<System.DateTime> NgayLap { get; set; }
         public Nullable<int> IdNhanvien { get; set; }
-        public Nullable<int> Soluong { get; set; }
-        public Nullable<double> Thanhtien { get; set; }
+        public Nullable<double> TongCong { get; set; }
     
-        public virtual NuocUong NuocUong { get; set; }
         public virtual NhanVien NhanVien { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTiethd> ChiTiethd { get; set; }
     }
 }

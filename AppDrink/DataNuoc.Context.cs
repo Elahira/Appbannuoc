@@ -30,5 +30,6 @@ namespace AppDrink
         public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
         public virtual DbSet<TheLoai> TheLoai { get; set; }
+        public virtual DbSet<ChiTiethd> ChiTiethd { get; set; }
     }
 }

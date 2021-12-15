@@ -44,16 +44,19 @@ namespace AppDrink.GUI
             busnuoc.laydanhsachnuoc(dgMenu);
         }
 
+        //lấy danh sách tên nhân viên
         public void loadTennv()
         {
             busnv.laytennvcb(cbTennv);
         }
 
+        //thoát giao diện menu bán hàng
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //thêm sản phẩm vào giỏ hàng
         private void btnThem_Click(object sender, EventArgs e)
         {
             NuocUong nc = dgMenu.CurrentRow.DataBoundItem as NuocUong;
@@ -65,26 +68,30 @@ namespace AppDrink.GUI
             lbltotal.Text = total.ToString();
         }
 
+        //thanh toán sản phẩm
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tiến hành thanh toán đơn này?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Tiến hành thanh toán đơn hàng này?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
                 HoaDon hd = new HoaDon()
                 {
-
-                    NgayLap = DateTime.Now
+                    IdNhanvien = busnv.getmanv(cbTennv.Text),
+                    NgayLap = DateTime.Now,
+                    TongCong = total
                 };
-                
                 if (bustt.thanhtoan(hd))
                 {
+                    themvaochitiethd();
                     MessageBox.Show("Thanh toán thành công!");
+                    lbltotal.Text = "0";
+                    dgOrder.Rows.Clear();
                 }
                 else
                     MessageBox.Show("Thanh toán không thành công");
             }
 
         }
-
+        //xóa sản phẩm khỏi giỏ hàng và giảm tổng số tiền
         private void btnXoa_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewCell oneCell in dgOrder.SelectedCells)
@@ -98,7 +105,7 @@ namespace AppDrink.GUI
                 }             
             }
         }
-
+        //xác nhận input phím là số thì nhập vào ô txtNumber
         private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Verify that the pressed key isn't CTRL or any non-numeric digit
@@ -108,19 +115,39 @@ namespace AppDrink.GUI
             }
         }
 
+        //khi trỏ từng sản phẩm thì số lượng reset về 1
         private void dgMenu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtNumber.Text = "1";
         }
 
+        //filter sản phẩm theo thể loại
         private void cbTentl_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            busnuoc.sorttheotl(cbTentl.Text, dgMenu);
+            busnuoc.filtertheotl(cbTentl.Text, dgMenu);
         }
 
+        //hiển thị tất cả sản phẩm
         private void btnXemAll_Click(object sender, EventArgs e)
         {
             loadMenu();
+        }
+
+        //tạo chi tiết hóa đơn
+        public void themvaochitiethd()
+        {
+            
+            for (int i = 0; i < dgOrder.Rows.Count; i++)
+            {
+                ChiTiethd cthd = new ChiTiethd()
+                {
+                    IdNuoc = busnuoc.getmanuoc(dgOrder.Rows[i].Cells["namedrink"].Value.ToString()),
+                    Soluong = int.Parse(dgOrder.Rows[i].Cells["number"].Value.ToString()),
+                    Thanhtien = double.Parse(dgOrder.Rows[i].Cells["price"].Value.ToString()),
+                    IdHoadon = bustt.getMahd()
+            };
+                bustt.chitiethd(cthd);
+            }
         }
 
     }

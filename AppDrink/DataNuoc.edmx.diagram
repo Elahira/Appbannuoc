@@ -5,14 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5636534a4a064eefaa1f43b14c01d78f" Name="Diagram1">
-        <EntityTypeShape EntityType="AppbannuocModel.HoaDon" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppbannuocModel.HoaDon" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AppbannuocModel.NuocUong" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppbannuocModel.NhanVien" Width="1.5" PointX="8.25" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppbannuocModel.TaiKhoan" Width="1.5" PointX="3.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppbannuocModel.NhanVien" Width="1.5" PointX="11.125" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppbannuocModel.TaiKhoan" Width="1.5" PointX="4.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="AppbannuocModel.TheLoai" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <AssociationConnector Association="AppbannuocModel.FK_HoaDon_NuocUong" ManuallyRouted="false" />
         <AssociationConnector ManuallyRouted="false" Association="AppbannuocModel.FK_HoaDon_NhanVien" />
         <AssociationConnector Association="AppbannuocModel.FK_NuocUong_TheLoai" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AppbannuocModel.ChiTiethd" Width="1.5" PointX="5.375" PointY="1.125" />
+        <AssociationConnector Association="AppbannuocModel.FK_ChiTiethd_HoaDon" />
+        <AssociationConnector Association="AppbannuocModel.FK_ChiTiethd_NuocUong" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

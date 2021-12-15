@@ -339,7 +339,7 @@ namespace AppDrink.GUI
             this.StateCommon.Header.Content.ShortText.ColorAngle = 145F;
             this.StateCommon.Header.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.StateCommon.Header.Content.ShortText.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Text = "FormMain";
+            this.Text = "MainDashboard";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

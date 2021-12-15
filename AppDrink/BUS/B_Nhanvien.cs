@@ -37,5 +37,10 @@ namespace AppDrink.BUS
         {
             return daonv.suanhanvien(nv);
         }
+
+        public int getmanv(String tennv)
+        {
+            return daonv.getManv(tennv);
+        }
     }
 }

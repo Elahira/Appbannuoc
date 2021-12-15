@@ -10,6 +10,7 @@ namespace AppDrink.DAO
     {
         AppbannuocEntities db = new AppbannuocEntities();
 
+        //tạo đơn thanh toán
         public bool Thanhtoan(HoaDon hd)
         {
             {
@@ -17,6 +18,25 @@ namespace AppDrink.DAO
                 db.SaveChanges();
             }
             return true;
+        }
+
+        //tạo chi tiết hóa đơn
+        public bool Chitiethd(ChiTiethd cthd)
+        {
+            {
+                db.ChiTiethd.Add(cthd);
+                db.SaveChanges();
+            }
+            return true;
+        }
+
+        //lấy mã hóa đơn
+        public int getIdhd()
+        {
+            var id = (from hd in db.HoaDon
+                     select new { hd.IdHoadon }).AsEnumerable();
+            int hdid = id.LastOrDefault().IdHoadon;
+            return hdid;
         }
     }
 }

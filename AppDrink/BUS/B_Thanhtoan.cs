@@ -15,5 +15,15 @@ namespace AppDrink.BUS
         {
             return daott.Thanhtoan(hd);
         }
+
+        public bool chitiethd(ChiTiethd cthd)
+        {
+            return daott.Chitiethd(cthd);
+        }
+
+        public int getMahd()
+        {
+            return daott.getIdhd();
+        }
     }
 }
