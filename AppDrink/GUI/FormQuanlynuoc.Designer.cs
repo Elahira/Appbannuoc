@@ -33,8 +33,12 @@ namespace AppDrink.GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbLoainuoc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgNuocuong = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.cbLoainuoc = new System.Windows.Forms.ComboBox();
+            this.idNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaiNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtGiatien = new System.Windows.Forms.TextBox();
             this.txtTennuoc = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -45,10 +49,6 @@ namespace AppDrink.GUI
             this.btnXoanuoc = new System.Windows.Forms.Button();
             this.btnThemnuoc = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.idNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaiNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgNuocuong)).BeginInit();
             this.SuspendLayout();
@@ -56,8 +56,8 @@ namespace AppDrink.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dgNuocuong);
             this.panel1.Controls.Add(this.cbLoainuoc);
+            this.panel1.Controls.Add(this.dgNuocuong);
             this.panel1.Controls.Add(this.txtGiatien);
             this.panel1.Controls.Add(this.txtTennuoc);
             this.panel1.Controls.Add(this.label13);
@@ -73,6 +73,26 @@ namespace AppDrink.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(967, 506);
             this.panel1.TabIndex = 0;
+            // 
+            // cbLoainuoc
+            // 
+            this.cbLoainuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbLoainuoc.BackColor = System.Drawing.Color.Transparent;
+            this.cbLoainuoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbLoainuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoainuoc.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbLoainuoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbLoainuoc.FocusedState.Parent = this.cbLoainuoc;
+            this.cbLoainuoc.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cbLoainuoc.ForeColor = System.Drawing.Color.Black;
+            this.cbLoainuoc.HoverState.Parent = this.cbLoainuoc;
+            this.cbLoainuoc.ItemHeight = 30;
+            this.cbLoainuoc.ItemsAppearance.Parent = this.cbLoainuoc;
+            this.cbLoainuoc.Location = new System.Drawing.Point(720, 411);
+            this.cbLoainuoc.Name = "cbLoainuoc";
+            this.cbLoainuoc.ShadowDecoration.Parent = this.cbLoainuoc;
+            this.cbLoainuoc.Size = new System.Drawing.Size(156, 36);
+            this.cbLoainuoc.TabIndex = 67;
             // 
             // dgNuocuong
             // 
@@ -111,7 +131,7 @@ namespace AppDrink.GUI
             this.dgNuocuong.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgNuocuong.EnableHeadersVisualStyles = false;
             this.dgNuocuong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgNuocuong.Location = new System.Drawing.Point(35, 57);
+            this.dgNuocuong.Location = new System.Drawing.Point(17, 49);
             this.dgNuocuong.Name = "dgNuocuong";
             this.dgNuocuong.ReadOnly = true;
             this.dgNuocuong.RowHeadersVisible = false;
@@ -142,17 +162,34 @@ namespace AppDrink.GUI
             this.dgNuocuong.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgNuocuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NuocCell_Click);
             // 
-            // cbLoainuoc
+            // idNuoc
             // 
-            this.cbLoainuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbLoainuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLoainuoc.FormattingEnabled = true;
-            this.cbLoainuoc.Location = new System.Drawing.Point(743, 428);
-            this.cbLoainuoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cbLoainuoc.Name = "cbLoainuoc";
-            this.cbLoainuoc.Size = new System.Drawing.Size(110, 27);
-            this.cbLoainuoc.TabIndex = 65;
-            this.cbLoainuoc.Click += new System.EventHandler(this.cbLoainuoc_Click);
+            this.idNuoc.DataPropertyName = "IdNuoc";
+            this.idNuoc.FillWeight = 90F;
+            this.idNuoc.HeaderText = "ID";
+            this.idNuoc.Name = "idNuoc";
+            this.idNuoc.ReadOnly = true;
+            // 
+            // tenNuoc
+            // 
+            this.tenNuoc.DataPropertyName = "TenNuoc";
+            this.tenNuoc.HeaderText = "Nước";
+            this.tenNuoc.Name = "tenNuoc";
+            this.tenNuoc.ReadOnly = true;
+            // 
+            // giaTien
+            // 
+            this.giaTien.DataPropertyName = "Gia";
+            this.giaTien.HeaderText = "Giá";
+            this.giaTien.Name = "giaTien";
+            this.giaTien.ReadOnly = true;
+            // 
+            // loaiNuoc
+            // 
+            this.loaiNuoc.DataPropertyName = "Tentheloai";
+            this.loaiNuoc.HeaderText = "Loại nước";
+            this.loaiNuoc.Name = "loaiNuoc";
+            this.loaiNuoc.ReadOnly = true;
             // 
             // txtGiatien
             // 
@@ -286,35 +323,6 @@ namespace AppDrink.GUI
             this.label10.TabIndex = 54;
             this.label10.Text = "Danh sách nước uống";
             // 
-            // idNuoc
-            // 
-            this.idNuoc.DataPropertyName = "IdNuoc";
-            this.idNuoc.FillWeight = 90F;
-            this.idNuoc.HeaderText = "ID";
-            this.idNuoc.Name = "idNuoc";
-            this.idNuoc.ReadOnly = true;
-            // 
-            // tenNuoc
-            // 
-            this.tenNuoc.DataPropertyName = "TenNuoc";
-            this.tenNuoc.HeaderText = "Nước";
-            this.tenNuoc.Name = "tenNuoc";
-            this.tenNuoc.ReadOnly = true;
-            // 
-            // giaTien
-            // 
-            this.giaTien.DataPropertyName = "Gia";
-            this.giaTien.HeaderText = "Giá";
-            this.giaTien.Name = "giaTien";
-            this.giaTien.ReadOnly = true;
-            // 
-            // loaiNuoc
-            // 
-            this.loaiNuoc.DataPropertyName = "Tentheloai";
-            this.loaiNuoc.HeaderText = "Loại nước";
-            this.loaiNuoc.Name = "loaiNuoc";
-            this.loaiNuoc.ReadOnly = true;
-            // 
             // FormQuanlynuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -336,7 +344,6 @@ namespace AppDrink.GUI
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbLoainuoc;
         private System.Windows.Forms.TextBox txtGiatien;
         private System.Windows.Forms.TextBox txtTennuoc;
         private System.Windows.Forms.Label label13;
@@ -352,5 +359,6 @@ namespace AppDrink.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiNuoc;
+        private Guna.UI2.WinForms.Guna2ComboBox cbLoainuoc;
     }
 }

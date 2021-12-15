@@ -188,6 +188,9 @@
     <EmbeddedResource Include="GUI\FormQuanlytl.resx">
       <DependentUpon>FormQuanlytl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThongke.resx">
+      <DependentUpon>FormThongke.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

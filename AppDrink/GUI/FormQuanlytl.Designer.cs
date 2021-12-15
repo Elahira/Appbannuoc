@@ -29,16 +29,19 @@ namespace AppDrink.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgTheloainuoc = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idtl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Theloainuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXemloai = new System.Windows.Forms.Button();
             this.btnSualoai = new System.Windows.Forms.Button();
             this.btnXoaloai = new System.Windows.Forms.Button();
             this.txtTentl = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemloai = new System.Windows.Forms.Button();
-            this.dgTheloainuoc = new System.Windows.Forms.DataGridView();
-            this.idtl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.theloainuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTheloainuoc)).BeginInit();
@@ -47,19 +50,98 @@ namespace AppDrink.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dgTheloainuoc);
             this.panel1.Controls.Add(this.btnXemloai);
             this.panel1.Controls.Add(this.btnSualoai);
             this.panel1.Controls.Add(this.btnXoaloai);
             this.panel1.Controls.Add(this.txtTentl);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.btnThemloai);
-            this.panel1.Controls.Add(this.dgTheloainuoc);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(817, 484);
+            this.panel1.Size = new System.Drawing.Size(817, 454);
             this.panel1.TabIndex = 0;
+            // 
+            // dgTheloainuoc
+            // 
+            this.dgTheloainuoc.AllowUserToAddRows = false;
+            this.dgTheloainuoc.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgTheloainuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgTheloainuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgTheloainuoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgTheloainuoc.BackgroundColor = System.Drawing.Color.White;
+            this.dgTheloainuoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgTheloainuoc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgTheloainuoc.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgTheloainuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgTheloainuoc.ColumnHeadersHeight = 30;
+            this.dgTheloainuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idtl,
+            this.Theloainuoc});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgTheloainuoc.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgTheloainuoc.EnableHeadersVisualStyles = false;
+            this.dgTheloainuoc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgTheloainuoc.Location = new System.Drawing.Point(16, 54);
+            this.dgTheloainuoc.Name = "dgTheloainuoc";
+            this.dgTheloainuoc.ReadOnly = true;
+            this.dgTheloainuoc.RowHeadersVisible = false;
+            this.dgTheloainuoc.RowTemplate.Height = 45;
+            this.dgTheloainuoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgTheloainuoc.Size = new System.Drawing.Size(492, 324);
+            this.dgTheloainuoc.TabIndex = 56;
+            this.dgTheloainuoc.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgTheloainuoc.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgTheloainuoc.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgTheloainuoc.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgTheloainuoc.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgTheloainuoc.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgTheloainuoc.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgTheloainuoc.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgTheloainuoc.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgTheloainuoc.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgTheloainuoc.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgTheloainuoc.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgTheloainuoc.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgTheloainuoc.ThemeStyle.ReadOnly = true;
+            this.dgTheloainuoc.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgTheloainuoc.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgTheloainuoc.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgTheloainuoc.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgTheloainuoc.ThemeStyle.RowsStyle.Height = 45;
+            this.dgTheloainuoc.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgTheloainuoc.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgTheloainuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellTheloai_Click);
+            // 
+            // idtl
+            // 
+            this.idtl.DataPropertyName = "IdTheloai";
+            this.idtl.HeaderText = "ID";
+            this.idtl.Name = "idtl";
+            this.idtl.ReadOnly = true;
+            // 
+            // Theloainuoc
+            // 
+            this.Theloainuoc.DataPropertyName = "Tentheloai";
+            this.Theloainuoc.HeaderText = "Tên thể loại";
+            this.Theloainuoc.Name = "Theloainuoc";
+            this.Theloainuoc.ReadOnly = true;
             // 
             // btnXemloai
             // 
@@ -68,7 +150,7 @@ namespace AppDrink.GUI
             this.btnXemloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemloai.ForeColor = System.Drawing.Color.Snow;
-            this.btnXemloai.Location = new System.Drawing.Point(644, 172);
+            this.btnXemloai.Location = new System.Drawing.Point(652, 117);
             this.btnXemloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXemloai.Name = "btnXemloai";
             this.btnXemloai.Size = new System.Drawing.Size(87, 42);
@@ -84,7 +166,7 @@ namespace AppDrink.GUI
             this.btnSualoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSualoai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSualoai.ForeColor = System.Drawing.Color.Snow;
-            this.btnSualoai.Location = new System.Drawing.Point(644, 109);
+            this.btnSualoai.Location = new System.Drawing.Point(652, 54);
             this.btnSualoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSualoai.Name = "btnSualoai";
             this.btnSualoai.Size = new System.Drawing.Size(87, 42);
@@ -100,7 +182,7 @@ namespace AppDrink.GUI
             this.btnXoaloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaloai.ForeColor = System.Drawing.Color.Snow;
-            this.btnXoaloai.Location = new System.Drawing.Point(549, 171);
+            this.btnXoaloai.Location = new System.Drawing.Point(557, 116);
             this.btnXoaloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoaloai.Name = "btnXoaloai";
             this.btnXoaloai.Size = new System.Drawing.Size(87, 42);
@@ -113,7 +195,7 @@ namespace AppDrink.GUI
             // 
             this.txtTentl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTentl.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTentl.Location = new System.Drawing.Point(549, 281);
+            this.txtTentl.Location = new System.Drawing.Point(557, 226);
             this.txtTentl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTentl.Name = "txtTentl";
             this.txtTentl.Size = new System.Drawing.Size(174, 30);
@@ -124,7 +206,7 @@ namespace AppDrink.GUI
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(571, 254);
+            this.label16.Location = new System.Drawing.Point(579, 199);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(131, 23);
             this.label16.TabIndex = 51;
@@ -137,7 +219,7 @@ namespace AppDrink.GUI
             this.btnThemloai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemloai.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemloai.ForeColor = System.Drawing.Color.Snow;
-            this.btnThemloai.Location = new System.Drawing.Point(549, 109);
+            this.btnThemloai.Location = new System.Drawing.Point(557, 54);
             this.btnThemloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemloai.Name = "btnThemloai";
             this.btnThemloai.Size = new System.Drawing.Size(87, 42);
@@ -145,39 +227,6 @@ namespace AppDrink.GUI
             this.btnThemloai.Text = "Thêm";
             this.btnThemloai.UseVisualStyleBackColor = false;
             this.btnThemloai.Click += new System.EventHandler(this.btnThemloai_Click);
-            // 
-            // dgTheloainuoc
-            // 
-            this.dgTheloainuoc.AllowUserToAddRows = false;
-            this.dgTheloainuoc.AllowUserToDeleteRows = false;
-            this.dgTheloainuoc.AllowUserToOrderColumns = true;
-            this.dgTheloainuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgTheloainuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTheloainuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idtl,
-            this.theloainuoc});
-            this.dgTheloainuoc.Location = new System.Drawing.Point(12, 53);
-            this.dgTheloainuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgTheloainuoc.Name = "dgTheloainuoc";
-            this.dgTheloainuoc.ReadOnly = true;
-            this.dgTheloainuoc.Size = new System.Drawing.Size(473, 375);
-            this.dgTheloainuoc.TabIndex = 49;
-            this.dgTheloainuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellTheloai_Click);
-            // 
-            // idtl
-            // 
-            this.idtl.DataPropertyName = "IdTheloai";
-            this.idtl.HeaderText = "ID";
-            this.idtl.Name = "idtl";
-            this.idtl.ReadOnly = true;
-            // 
-            // theloainuoc
-            // 
-            this.theloainuoc.DataPropertyName = "TenTheLoai";
-            this.theloainuoc.HeaderText = "Tên thể loại";
-            this.theloainuoc.Name = "theloainuoc";
-            this.theloainuoc.ReadOnly = true;
-            this.theloainuoc.Width = 120;
             // 
             // label17
             // 
@@ -194,7 +243,7 @@ namespace AppDrink.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 484);
+            this.ClientSize = new System.Drawing.Size(817, 454);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -217,9 +266,9 @@ namespace AppDrink.GUI
         private System.Windows.Forms.TextBox txtTentl;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnThemloai;
-        private System.Windows.Forms.DataGridView dgTheloainuoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idtl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn theloainuoc;
         private System.Windows.Forms.Label label17;
+        private Guna.UI2.WinForms.Guna2DataGridView dgTheloainuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idtl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Theloainuoc;
     }
 }

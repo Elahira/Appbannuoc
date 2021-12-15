@@ -114,7 +114,8 @@ namespace AppDrink.GUI
         private void btnThongke_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender, RGBcolor.color5);
-            
+            OpenChildForm(new FormThongke());
+
         }
 
         private void reset()

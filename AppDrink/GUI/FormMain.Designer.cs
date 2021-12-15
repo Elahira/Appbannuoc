@@ -223,8 +223,8 @@ namespace AppDrink.GUI
             // 
             // panelDesktop
             // 
+            this.panelDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDesktop.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(0, 70);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1028, 512);

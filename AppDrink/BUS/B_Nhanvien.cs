@@ -17,6 +17,12 @@ namespace AppDrink.BUS
             dg.DataSource = daonv.GetNhanViens().ToList();
         }
 
+        public void laytennvcb(ComboBox cb)
+        {
+            cb.DataSource = daonv.GetNhanViens().ToList();
+            cb.DisplayMember = "Hoten";
+        }
+
         public bool themNhanvien(NhanVien nv)
         {
             return daonv.themnhanvien(nv);

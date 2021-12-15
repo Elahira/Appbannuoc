@@ -62,6 +62,7 @@ namespace AppDrink.GUI
                 MessageBox.Show("Xin hãy nhập đầy đủ thông tin");
         }
 
+        //sửa danh sách nước
         private void btnSuanuoc_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn sửa thông tin nước uống này?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -80,6 +81,7 @@ namespace AppDrink.GUI
             }
         }
 
+        //xóa nước
         private void btnXoanuoc_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa thông tin nước uống này?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -105,11 +107,6 @@ namespace AppDrink.GUI
                 txtGiatien.Text = dgNuocuong.Rows[index].Cells["giaTien"].Value.ToString();
                 cbLoainuoc.Text = dgNuocuong.Rows[index].Cells["loaiNuoc"].Value.ToString();
             }
-        }
-
-        private void cbLoainuoc_Click(object sender, EventArgs e)
-        {
-            bustln.laydanhsachtheloaicb(cbLoainuoc);
         }
     }
 }

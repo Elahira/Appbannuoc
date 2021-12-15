@@ -11,8 +11,7 @@ namespace AppDrink.BUS
     class B_Taikhoan
     {
         D_Taikhoan daotk = new D_Taikhoan();
-        public int id;
-        
+       
         public void laydanhsachtaikhoan(DataGridView dg)
         {
             dg.DataSource = daotk.GetTaiKhoans().ToList();
@@ -26,7 +25,6 @@ namespace AppDrink.BUS
             {
                 if (i.Taikhoan == tk && i.Matkhau == mk)
                 {
-                    id = i.IdTK;
                     return true;
                 }
             }

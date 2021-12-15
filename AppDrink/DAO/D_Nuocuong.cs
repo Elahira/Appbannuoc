@@ -10,12 +10,32 @@ namespace AppDrink.DAO
     {
         AppbannuocEntities db = new AppbannuocEntities();
 
+        //danh sách nước
         public List<NuocUong> GetNuocUongs()
         {
             List<NuocUong> dsnc = new List<NuocUong>();
             var ds = from nc in db.NuocUong
                      join tl in db.TheLoai on nc.IdTheloai equals tl.IdTheloai
                      select new { nc.IdNuoc, nc.TenNuoc, nc.Gia, nc.TheLoai};
+            foreach (var i in ds)
+            {
+                NuocUong nc = new NuocUong();
+                nc.IdNuoc = i.IdNuoc;
+                nc.TenNuoc = i.TenNuoc;
+                nc.Gia = i.Gia;
+                nc.Tentheloai = i.TheLoai.Tentheloai;
+                dsnc.Add(nc);
+            }
+            return dsnc;
+        }
+
+        public List<NuocUong> sorttheotl(String tentl)
+        {
+            List<NuocUong> dsnc = new List<NuocUong>();
+            var ds = from nc in db.NuocUong
+                     join tl in db.TheLoai on nc.IdTheloai equals tl.IdTheloai
+                     where tl.Tentheloai==tentl
+                     select new { nc.IdNuoc, nc.TenNuoc, nc.Gia, nc.TheLoai };
             foreach (var i in ds)
             {
                 NuocUong nc = new NuocUong();
