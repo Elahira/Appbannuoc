@@ -28,5 +28,6 @@ namespace AppDrink
         public virtual NhanVien NhanVien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTiethd> ChiTiethd { get; set; }
+        public string Tennv { get; internal set; }
     }
 }

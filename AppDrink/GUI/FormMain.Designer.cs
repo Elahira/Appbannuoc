@@ -65,7 +65,7 @@ namespace AppDrink.GUI
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 582);
+            this.panelMenu.Size = new System.Drawing.Size(200, 672);
             this.panelMenu.TabIndex = 0;
             // 
             // iconButton1
@@ -79,9 +79,9 @@ namespace AppDrink.GUI
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 531);
+            this.iconButton1.Location = new System.Drawing.Point(0, 613);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(200, 51);
+            this.iconButton1.Size = new System.Drawing.Size(200, 59);
             this.iconButton1.TabIndex = 3;
             this.iconButton1.Text = "Thoát";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,9 +101,9 @@ namespace AppDrink.GUI
             this.btnThongke.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongke.IconSize = 40;
             this.btnThongke.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongke.Location = new System.Drawing.Point(0, 360);
+            this.btnThongke.Location = new System.Drawing.Point(0, 415);
             this.btnThongke.Name = "btnThongke";
-            this.btnThongke.Size = new System.Drawing.Size(200, 65);
+            this.btnThongke.Size = new System.Drawing.Size(200, 75);
             this.btnThongke.TabIndex = 5;
             this.btnThongke.Text = "Thống kê";
             this.btnThongke.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,9 +123,9 @@ namespace AppDrink.GUI
             this.btnTheloai.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTheloai.IconSize = 40;
             this.btnTheloai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTheloai.Location = new System.Drawing.Point(0, 295);
+            this.btnTheloai.Location = new System.Drawing.Point(0, 340);
             this.btnTheloai.Name = "btnTheloai";
-            this.btnTheloai.Size = new System.Drawing.Size(200, 65);
+            this.btnTheloai.Size = new System.Drawing.Size(200, 75);
             this.btnTheloai.TabIndex = 4;
             this.btnTheloai.Text = "Danh mục";
             this.btnTheloai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,9 +145,9 @@ namespace AppDrink.GUI
             this.btnNuoc.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuoc.IconSize = 40;
             this.btnNuoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuoc.Location = new System.Drawing.Point(0, 230);
+            this.btnNuoc.Location = new System.Drawing.Point(0, 265);
             this.btnNuoc.Name = "btnNuoc";
-            this.btnNuoc.Size = new System.Drawing.Size(200, 65);
+            this.btnNuoc.Size = new System.Drawing.Size(200, 75);
             this.btnNuoc.TabIndex = 3;
             this.btnNuoc.Text = "Nước uống";
             this.btnNuoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,9 +167,9 @@ namespace AppDrink.GUI
             this.btnNhanvien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNhanvien.IconSize = 40;
             this.btnNhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanvien.Location = new System.Drawing.Point(0, 165);
+            this.btnNhanvien.Location = new System.Drawing.Point(0, 190);
             this.btnNhanvien.Name = "btnNhanvien";
-            this.btnNhanvien.Size = new System.Drawing.Size(200, 65);
+            this.btnNhanvien.Size = new System.Drawing.Size(200, 75);
             this.btnNhanvien.TabIndex = 2;
             this.btnNhanvien.Text = "Quản lý nhân viên";
             this.btnNhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,9 +189,9 @@ namespace AppDrink.GUI
             this.btnTaikhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTaikhoan.IconSize = 40;
             this.btnTaikhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaikhoan.Location = new System.Drawing.Point(0, 100);
+            this.btnTaikhoan.Location = new System.Drawing.Point(0, 115);
             this.btnTaikhoan.Name = "btnTaikhoan";
-            this.btnTaikhoan.Size = new System.Drawing.Size(200, 65);
+            this.btnTaikhoan.Size = new System.Drawing.Size(200, 75);
             this.btnTaikhoan.TabIndex = 1;
             this.btnTaikhoan.Text = "Quản lý tài khoản";
             this.btnTaikhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,7 +206,7 @@ namespace AppDrink.GUI
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 100);
+            this.panelLogo.Size = new System.Drawing.Size(200, 115);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -215,7 +215,7 @@ namespace AppDrink.GUI
             this.pictureBox1.Image = global::AppDrink.Properties.Resources.drinkicon1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -223,11 +223,11 @@ namespace AppDrink.GUI
             // 
             // panelDesktop
             // 
-            this.panelDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDesktop.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelDesktop.Location = new System.Drawing.Point(0, 70);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(0, 81);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1028, 512);
+            this.panelDesktop.Size = new System.Drawing.Size(1028, 591);
             this.panelDesktop.TabIndex = 2;
             // 
             // iconBtnMenu
@@ -245,11 +245,11 @@ namespace AppDrink.GUI
             this.iconBtnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnMenu.IconSize = 45;
             this.iconBtnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnMenu.Location = new System.Drawing.Point(927, 0);
+            this.iconBtnMenu.Location = new System.Drawing.Point(895, 0);
             this.iconBtnMenu.Name = "iconBtnMenu";
-            this.iconBtnMenu.Size = new System.Drawing.Size(101, 70);
+            this.iconBtnMenu.Size = new System.Drawing.Size(133, 81);
             this.iconBtnMenu.TabIndex = 0;
-            this.iconBtnMenu.Text = "Menu";
+            this.iconBtnMenu.Text = "CỬA HÀNG";
             this.iconBtnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnMenu.UseVisualStyleBackColor = false;
@@ -265,9 +265,9 @@ namespace AppDrink.GUI
             this.iconCurrentChild.IconColor = System.Drawing.Color.Crimson;
             this.iconCurrentChild.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChild.IconSize = 44;
-            this.iconCurrentChild.Location = new System.Drawing.Point(6, 12);
+            this.iconCurrentChild.Location = new System.Drawing.Point(6, 14);
             this.iconCurrentChild.Name = "iconCurrentChild";
-            this.iconCurrentChild.Size = new System.Drawing.Size(44, 47);
+            this.iconCurrentChild.Size = new System.Drawing.Size(44, 54);
             this.iconCurrentChild.TabIndex = 1;
             this.iconCurrentChild.TabStop = false;
             // 
@@ -285,7 +285,7 @@ namespace AppDrink.GUI
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
-            this.panelTitle.Size = new System.Drawing.Size(1028, 70);
+            this.panelTitle.Size = new System.Drawing.Size(1028, 81);
             this.panelTitle.TabIndex = 0;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -295,7 +295,7 @@ namespace AppDrink.GUI
             this.TitleChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(127)))), ((int)(((byte)(187)))));
             this.TitleChild.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleChild.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TitleChild.Location = new System.Drawing.Point(56, 26);
+            this.TitleChild.Location = new System.Drawing.Point(56, 30);
             this.TitleChild.Name = "TitleChild";
             this.TitleChild.Size = new System.Drawing.Size(51, 19);
             this.TitleChild.TabIndex = 2;
@@ -309,16 +309,17 @@ namespace AppDrink.GUI
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(200, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1028, 582);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1028, 672);
             this.guna2CustomGradientPanel1.TabIndex = 3;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 582);
+            this.ClientSize = new System.Drawing.Size(1228, 672);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.panelMenu);
+            this.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StateCommon.Border.Color1 = System.Drawing.Color.Black;

@@ -70,8 +70,9 @@ namespace AppDrink.GUI
             this.panel1.Controls.Add(this.label10);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(967, 506);
+            this.panel1.Size = new System.Drawing.Size(1014, 597);
             this.panel1.TabIndex = 0;
             // 
             // cbLoainuoc
@@ -88,10 +89,11 @@ namespace AppDrink.GUI
             this.cbLoainuoc.HoverState.Parent = this.cbLoainuoc;
             this.cbLoainuoc.ItemHeight = 30;
             this.cbLoainuoc.ItemsAppearance.Parent = this.cbLoainuoc;
-            this.cbLoainuoc.Location = new System.Drawing.Point(720, 411);
+            this.cbLoainuoc.Location = new System.Drawing.Point(760, 497);
+            this.cbLoainuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbLoainuoc.Name = "cbLoainuoc";
             this.cbLoainuoc.ShadowDecoration.Parent = this.cbLoainuoc;
-            this.cbLoainuoc.Size = new System.Drawing.Size(156, 36);
+            this.cbLoainuoc.Size = new System.Drawing.Size(175, 36);
             this.cbLoainuoc.TabIndex = 67;
             // 
             // dgNuocuong
@@ -131,13 +133,14 @@ namespace AppDrink.GUI
             this.dgNuocuong.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgNuocuong.EnableHeadersVisualStyles = false;
             this.dgNuocuong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgNuocuong.Location = new System.Drawing.Point(17, 49);
+            this.dgNuocuong.Location = new System.Drawing.Point(17, 58);
+            this.dgNuocuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgNuocuong.Name = "dgNuocuong";
             this.dgNuocuong.ReadOnly = true;
             this.dgNuocuong.RowHeadersVisible = false;
             this.dgNuocuong.RowTemplate.Height = 45;
             this.dgNuocuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgNuocuong.Size = new System.Drawing.Size(594, 398);
+            this.dgNuocuong.Size = new System.Drawing.Size(668, 482);
             this.dgNuocuong.TabIndex = 66;
             this.dgNuocuong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgNuocuong.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -195,20 +198,20 @@ namespace AppDrink.GUI
             // 
             this.txtGiatien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtGiatien.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiatien.Location = new System.Drawing.Point(680, 325);
-            this.txtGiatien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGiatien.Location = new System.Drawing.Point(729, 392);
+            this.txtGiatien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGiatien.Name = "txtGiatien";
-            this.txtGiatien.Size = new System.Drawing.Size(236, 30);
+            this.txtGiatien.Size = new System.Drawing.Size(220, 30);
             this.txtGiatien.TabIndex = 64;
             // 
             // txtTennuoc
             // 
             this.txtTennuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTennuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTennuoc.Location = new System.Drawing.Point(680, 222);
-            this.txtTennuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTennuoc.Location = new System.Drawing.Point(729, 268);
+            this.txtTennuoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTennuoc.Name = "txtTennuoc";
-            this.txtTennuoc.Size = new System.Drawing.Size(236, 30);
+            this.txtTennuoc.Size = new System.Drawing.Size(220, 30);
             this.txtTennuoc.TabIndex = 63;
             // 
             // label13
@@ -216,7 +219,7 @@ namespace AppDrink.GUI
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(749, 380);
+            this.label13.Location = new System.Drawing.Point(793, 459);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(99, 23);
@@ -228,7 +231,7 @@ namespace AppDrink.GUI
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(758, 277);
+            this.label12.Location = new System.Drawing.Point(803, 334);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 23);
@@ -240,7 +243,7 @@ namespace AppDrink.GUI
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(726, 174);
+            this.label11.Location = new System.Drawing.Point(767, 210);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(144, 23);
@@ -254,10 +257,10 @@ namespace AppDrink.GUI
             this.btnXemnuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemnuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemnuoc.ForeColor = System.Drawing.Color.Snow;
-            this.btnXemnuoc.Location = new System.Drawing.Point(799, 112);
-            this.btnXemnuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXemnuoc.Location = new System.Drawing.Point(837, 112);
+            this.btnXemnuoc.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnXemnuoc.Name = "btnXemnuoc";
-            this.btnXemnuoc.Size = new System.Drawing.Size(87, 42);
+            this.btnXemnuoc.Size = new System.Drawing.Size(87, 44);
             this.btnXemnuoc.TabIndex = 59;
             this.btnXemnuoc.Text = "Xem";
             this.btnXemnuoc.UseVisualStyleBackColor = false;
@@ -270,10 +273,10 @@ namespace AppDrink.GUI
             this.btnSuanuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuanuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuanuoc.ForeColor = System.Drawing.Color.Snow;
-            this.btnSuanuoc.Location = new System.Drawing.Point(799, 49);
-            this.btnSuanuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSuanuoc.Location = new System.Drawing.Point(837, 58);
+            this.btnSuanuoc.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSuanuoc.Name = "btnSuanuoc";
-            this.btnSuanuoc.Size = new System.Drawing.Size(87, 42);
+            this.btnSuanuoc.Size = new System.Drawing.Size(87, 44);
             this.btnSuanuoc.TabIndex = 58;
             this.btnSuanuoc.Text = "Sửa";
             this.btnSuanuoc.UseVisualStyleBackColor = false;
@@ -286,10 +289,10 @@ namespace AppDrink.GUI
             this.btnXoanuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoanuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoanuoc.ForeColor = System.Drawing.Color.Snow;
-            this.btnXoanuoc.Location = new System.Drawing.Point(706, 112);
-            this.btnXoanuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoanuoc.Location = new System.Drawing.Point(744, 112);
+            this.btnXoanuoc.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnXoanuoc.Name = "btnXoanuoc";
-            this.btnXoanuoc.Size = new System.Drawing.Size(87, 42);
+            this.btnXoanuoc.Size = new System.Drawing.Size(87, 44);
             this.btnXoanuoc.TabIndex = 57;
             this.btnXoanuoc.Text = "Xóa";
             this.btnXoanuoc.UseVisualStyleBackColor = false;
@@ -302,10 +305,10 @@ namespace AppDrink.GUI
             this.btnThemnuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemnuoc.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemnuoc.ForeColor = System.Drawing.Color.Snow;
-            this.btnThemnuoc.Location = new System.Drawing.Point(706, 49);
-            this.btnThemnuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThemnuoc.Location = new System.Drawing.Point(744, 58);
+            this.btnThemnuoc.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnThemnuoc.Name = "btnThemnuoc";
-            this.btnThemnuoc.Size = new System.Drawing.Size(87, 42);
+            this.btnThemnuoc.Size = new System.Drawing.Size(87, 44);
             this.btnThemnuoc.TabIndex = 56;
             this.btnThemnuoc.Text = "Thêm";
             this.btnThemnuoc.UseVisualStyleBackColor = false;
@@ -316,7 +319,7 @@ namespace AppDrink.GUI
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 9);
+            this.label10.Location = new System.Drawing.Point(13, 10);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(168, 23);
@@ -325,12 +328,12 @@ namespace AppDrink.GUI
             // 
             // FormQuanlynuoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 506);
+            this.ClientSize = new System.Drawing.Size(1014, 597);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormQuanlynuoc";
             this.Text = "Nước uống";
             this.Load += new System.EventHandler(this.FormQuanlynuoc_Load);

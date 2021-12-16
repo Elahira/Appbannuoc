@@ -19,7 +19,7 @@ namespace AppDrink.GUI
         public FormLogin()
         {
             InitializeComponent();
-
+            MaximizeBox = false;
         }
 
         //chức năng đăng nhập

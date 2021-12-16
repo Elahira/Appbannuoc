@@ -84,6 +84,7 @@ namespace AppDrink.GUI
                     themvaochitiethd();
                     MessageBox.Show("Thanh toán thành công!");
                     lbltotal.Text = "0";
+                    total = 0;
                     dgOrder.Rows.Clear();
                 }
                 else
@@ -145,7 +146,7 @@ namespace AppDrink.GUI
                     Soluong = int.Parse(dgOrder.Rows[i].Cells["number"].Value.ToString()),
                     Thanhtien = double.Parse(dgOrder.Rows[i].Cells["price"].Value.ToString()),
                     IdHoadon = bustt.getMahd()
-            };
+                };
                 bustt.chitiethd(cthd);
             }
         }
