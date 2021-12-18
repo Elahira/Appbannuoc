@@ -21,5 +21,10 @@ namespace AppDrink.BUS
         {
             dg.DataSource = daothongke.GetdsHoadontheodate(fromdate,todate).ToList();
         }
+
+        public void hienchitiethd(DataGridView dg, int mahd)
+        {
+            dg.DataSource = daothongke.GetCtHoadon(mahd);
+        }
     }
 }

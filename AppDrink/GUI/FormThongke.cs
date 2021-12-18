@@ -15,6 +15,10 @@ namespace AppDrink.GUI
     {
         B_Thongke busthongke = new B_Thongke();
         double tongdoanhthu = 0;
+        public static string tennv;
+        public static string datelap;
+        public static int mahd;
+        public static double tong;
         public FormThongke()
         {
             InitializeComponent();
@@ -50,6 +54,17 @@ namespace AppDrink.GUI
             dgThongke.DataSource = null;
             tongdoanhthu = 0;
             lblDoanhthu.Text = tongdoanhthu.ToString();
+        }
+
+        private void dgThongke_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            HoaDon hd = dgThongke.CurrentRow.DataBoundItem as HoaDon;
+            tennv = hd.Tennv;
+            datelap = hd.NgayLap.Value.ToShortDateString();
+            mahd = hd.IdHoadon;
+            tong = (double)hd.TongCong;
+            Bill fb = new Bill();
+            fb.ShowDialog();
         }
     }
 }

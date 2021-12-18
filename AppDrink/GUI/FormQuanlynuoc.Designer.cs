@@ -55,7 +55,7 @@ namespace AppDrink.GUI
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.cbLoainuoc);
             this.panel1.Controls.Add(this.dgNuocuong);
             this.panel1.Controls.Add(this.txtGiatien);

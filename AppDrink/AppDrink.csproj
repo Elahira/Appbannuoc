@@ -105,6 +105,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataNuoc.edmx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <Compile Include="TheLoai.cs">
       <DependentUpon>DataNuoc.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

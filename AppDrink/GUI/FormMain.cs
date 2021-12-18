@@ -29,6 +29,7 @@ namespace AppDrink.GUI
             this.DoubleBuffered = true;*/
         }
 
+        //thay đổi màu rgb cho từng button
         public struct RGBcolor
         {
             public static Color color1 = Color.FromArgb(103, 219, 70);
@@ -39,7 +40,7 @@ namespace AppDrink.GUI
            
         }
 
-
+        
         private void ActivateBtn(object senderBtn, Color color)
         {
             if(senderBtn != null)
@@ -150,18 +151,12 @@ namespace AppDrink.GUI
             this.Close();
         }
 
-        private void btnMenu(object sender, EventArgs e)
+        private void BtnMenu_Click(object sender, EventArgs e)
         {
             FormMenu fmenu = new FormMenu();
             this.Hide();
             fmenu.ShowDialog();
             this.Show();
-        }
-
-        private void panelTitle_MouseDown1(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void FormMain_Load(object sender, EventArgs e)

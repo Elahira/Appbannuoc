@@ -61,7 +61,7 @@ namespace AppDrink.GUI
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.DateNv);
             this.panel1.Controls.Add(this.cbGioitinh);
             this.panel1.Controls.Add(this.dgNhanvien);
@@ -269,7 +269,7 @@ namespace AppDrink.GUI
             this.txtSdt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSdt.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSdt.Location = new System.Drawing.Point(792, 426);
-            this.txtSdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(4);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(133, 27);
             this.txtSdt.TabIndex = 63;
@@ -279,7 +279,7 @@ namespace AppDrink.GUI
             this.txtTenNv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTenNv.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNv.Location = new System.Drawing.Point(792, 225);
-            this.txtTenNv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNv.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNv.Name = "txtTenNv";
             this.txtTenNv.Size = new System.Drawing.Size(181, 27);
             this.txtTenNv.TabIndex = 62;
@@ -366,7 +366,7 @@ namespace AppDrink.GUI
             this.ClientSize = new System.Drawing.Size(1034, 514);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto Cn", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormQuanlynv";
             this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.FormQuanlynv_Load);

@@ -38,18 +38,18 @@ namespace AppDrink.GUI
             this.btnTaikhoan = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panelTitle = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.iconBtnMenu = new FontAwesome.Sharp.IconButton();
             this.iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
-            this.panelTitle = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.TitleChild = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).BeginInit();
-            this.panelTitle.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.panelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -221,18 +221,45 @@ namespace AppDrink.GUI
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.panelDesktop);
+            this.guna2CustomGradientPanel1.Controls.Add(this.panelTitle);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(200, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1028, 672);
+            this.guna2CustomGradientPanel1.TabIndex = 3;
+            // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelDesktop.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(0, 81);
+            this.panelDesktop.Location = new System.Drawing.Point(0, 72);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1028, 591);
-            this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Padding = new System.Windows.Forms.Padding(10);
+            this.panelDesktop.Size = new System.Drawing.Size(1028, 600);
+            this.panelDesktop.TabIndex = 4;
+            // 
+            // panelTitle
+            // 
+            this.panelTitle.Controls.Add(this.iconBtnMenu);
+            this.panelTitle.Controls.Add(this.iconCurrentChild);
+            this.panelTitle.Controls.Add(this.TitleChild);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.FillColor = System.Drawing.Color.RoyalBlue;
+            this.panelTitle.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(53)))), ((int)(((byte)(81)))));
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
+            this.panelTitle.Size = new System.Drawing.Size(1028, 72);
+            this.panelTitle.TabIndex = 3;
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // iconBtnMenu
             // 
-            this.iconBtnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
+            this.iconBtnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(61)))), ((int)(((byte)(102)))));
             this.iconBtnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.iconBtnMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconBtnMenu.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
@@ -247,70 +274,40 @@ namespace AppDrink.GUI
             this.iconBtnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnMenu.Location = new System.Drawing.Point(895, 0);
             this.iconBtnMenu.Name = "iconBtnMenu";
-            this.iconBtnMenu.Size = new System.Drawing.Size(133, 81);
-            this.iconBtnMenu.TabIndex = 0;
+            this.iconBtnMenu.Size = new System.Drawing.Size(133, 72);
+            this.iconBtnMenu.TabIndex = 5;
             this.iconBtnMenu.Text = "CỬA HÀNG";
-            this.iconBtnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnMenu.UseVisualStyleBackColor = false;
-            this.iconBtnMenu.Click += new System.EventHandler(this.btnMenu);
+            this.iconBtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
             // iconCurrentChild
             // 
             this.iconCurrentChild.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.iconCurrentChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(127)))), ((int)(((byte)(187)))));
+            this.iconCurrentChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(101)))), ((int)(((byte)(214)))));
             this.iconCurrentChild.ForeColor = System.Drawing.Color.Crimson;
             this.iconCurrentChild.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrentChild.IconColor = System.Drawing.Color.Crimson;
             this.iconCurrentChild.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChild.IconSize = 44;
-            this.iconCurrentChild.Location = new System.Drawing.Point(6, 14);
+            this.iconCurrentChild.IconSize = 43;
+            this.iconCurrentChild.Location = new System.Drawing.Point(10, 6);
             this.iconCurrentChild.Name = "iconCurrentChild";
-            this.iconCurrentChild.Size = new System.Drawing.Size(44, 54);
-            this.iconCurrentChild.TabIndex = 1;
+            this.iconCurrentChild.Size = new System.Drawing.Size(44, 43);
+            this.iconCurrentChild.TabIndex = 3;
             this.iconCurrentChild.TabStop = false;
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(76)))), ((int)(((byte)(92)))));
-            this.panelTitle.Controls.Add(this.TitleChild);
-            this.panelTitle.Controls.Add(this.iconBtnMenu);
-            this.panelTitle.Controls.Add(this.iconCurrentChild);
-            this.panelTitle.CustomizableEdges.BottomLeft = false;
-            this.panelTitle.CustomizableEdges.TopRight = false;
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.FillColor = System.Drawing.Color.Navy;
-            this.panelTitle.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
-            this.panelTitle.Size = new System.Drawing.Size(1028, 81);
-            this.panelTitle.TabIndex = 0;
-            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // TitleChild
             // 
             this.TitleChild.AutoSize = true;
-            this.TitleChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(127)))), ((int)(((byte)(187)))));
+            this.TitleChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(101)))), ((int)(((byte)(214)))));
             this.TitleChild.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleChild.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TitleChild.Location = new System.Drawing.Point(56, 30);
+            this.TitleChild.Location = new System.Drawing.Point(60, 22);
             this.TitleChild.Name = "TitleChild";
             this.TitleChild.Size = new System.Drawing.Size(51, 19);
-            this.TitleChild.TabIndex = 2;
+            this.TitleChild.TabIndex = 4;
             this.TitleChild.Text = "Home";
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.Controls.Add(this.panelDesktop);
-            this.guna2CustomGradientPanel1.Controls.Add(this.panelTitle);
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(200, 0);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1028, 672);
-            this.guna2CustomGradientPanel1.TabIndex = 3;
             // 
             // FormMain
             // 
@@ -345,10 +342,10 @@ namespace AppDrink.GUI
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).EndInit();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,13 +359,13 @@ namespace AppDrink.GUI
         public FontAwesome.Sharp.IconButton btnNhanvien;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelTitle;
-        private FontAwesome.Sharp.IconButton iconBtnMenu;
-        private System.Windows.Forms.Label TitleChild;
-        private FontAwesome.Sharp.IconPictureBox iconCurrentChild;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.Panel panelDesktop;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelTitle;
+        private FontAwesome.Sharp.IconButton iconBtnMenu;
+        private FontAwesome.Sharp.IconPictureBox iconCurrentChild;
+        private System.Windows.Forms.Label TitleChild;
     }
 }

@@ -29,114 +29,80 @@ namespace AppDrink.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lblDoanhthu = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dgThongke = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Idhd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.money = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nguoilap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.money = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Idhd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblDoanhthu = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.toDate = new System.Windows.Forms.DateTimePicker();
             this.fromDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThongke = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgThongke)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.Controls.Add(this.guna2GradientPanel1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 82);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1049, 538);
-            this.guna2Panel2.TabIndex = 1;
-            // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2GradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2GradientPanel1.Controls.Add(this.lblDoanhthu);
             this.guna2GradientPanel1.Controls.Add(this.label4);
             this.guna2GradientPanel1.Controls.Add(this.dgThongke);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(10, 10);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1029, 518);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1049, 620);
             this.guna2GradientPanel1.TabIndex = 2;
-            // 
-            // lblDoanhthu
-            // 
-            this.lblDoanhthu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDoanhthu.AutoSize = true;
-            this.lblDoanhthu.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoanhthu.Location = new System.Drawing.Point(375, 440);
-            this.lblDoanhthu.Name = "lblDoanhthu";
-            this.lblDoanhthu.Size = new System.Drawing.Size(20, 23);
-            this.lblDoanhthu.TabIndex = 3;
-            this.lblDoanhthu.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(237, 440);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 23);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Tổng doanh thu: ";
             // 
             // dgThongke
             // 
             this.dgThongke.AllowUserToAddRows = false;
             this.dgThongke.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgThongke.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgThongke.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgThongke.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgThongke.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgThongke.BackgroundColor = System.Drawing.Color.White;
             this.dgThongke.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgThongke.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgThongke.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgThongke.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgThongke.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgThongke.ColumnHeadersHeight = 30;
             this.dgThongke.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Idhd,
             this.ngaylap,
             this.money,
             this.nguoilap});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgThongke.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgThongke.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgThongke.EnableHeadersVisualStyles = false;
             this.dgThongke.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgThongke.Location = new System.Drawing.Point(146, 12);
+            this.dgThongke.Location = new System.Drawing.Point(128, 133);
             this.dgThongke.Name = "dgThongke";
             this.dgThongke.ReadOnly = true;
             this.dgThongke.RowHeadersVisible = false;
@@ -165,20 +131,14 @@ namespace AppDrink.GUI
             this.dgThongke.ThemeStyle.RowsStyle.Height = 45;
             this.dgThongke.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgThongke.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgThongke.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgThongke_CellDoubleClick);
             // 
-            // Idhd
+            // nguoilap
             // 
-            this.Idhd.DataPropertyName = "IdHoadon";
-            this.Idhd.HeaderText = "ID";
-            this.Idhd.Name = "Idhd";
-            this.Idhd.ReadOnly = true;
-            // 
-            // ngaylap
-            // 
-            this.ngaylap.DataPropertyName = "NgayLap";
-            this.ngaylap.HeaderText = "Ngày thanh toán";
-            this.ngaylap.Name = "ngaylap";
-            this.ngaylap.ReadOnly = true;
+            this.nguoilap.DataPropertyName = "Tennv";
+            this.nguoilap.HeaderText = "Người lập đơn";
+            this.nguoilap.Name = "nguoilap";
+            this.nguoilap.ReadOnly = true;
             // 
             // money
             // 
@@ -187,12 +147,41 @@ namespace AppDrink.GUI
             this.money.Name = "money";
             this.money.ReadOnly = true;
             // 
-            // nguoilap
+            // ngaylap
             // 
-            this.nguoilap.DataPropertyName = "Tennv";
-            this.nguoilap.HeaderText = "Người lập đơn";
-            this.nguoilap.Name = "nguoilap";
-            this.nguoilap.ReadOnly = true;
+            this.ngaylap.DataPropertyName = "NgayLap";
+            this.ngaylap.HeaderText = "Ngày thanh toán";
+            this.ngaylap.Name = "ngaylap";
+            this.ngaylap.ReadOnly = true;
+            // 
+            // Idhd
+            // 
+            this.Idhd.DataPropertyName = "IdHoadon";
+            this.Idhd.HeaderText = "ID";
+            this.Idhd.Name = "Idhd";
+            this.Idhd.ReadOnly = true;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(219, 561);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 23);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Tổng doanh thu: ";
+            // 
+            // lblDoanhthu
+            // 
+            this.lblDoanhthu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDoanhthu.AutoSize = true;
+            this.lblDoanhthu.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoanhthu.Location = new System.Drawing.Point(357, 561);
+            this.lblDoanhthu.Name = "lblDoanhthu";
+            this.lblDoanhthu.Size = new System.Drawing.Size(20, 23);
+            this.lblDoanhthu.TabIndex = 3;
+            this.lblDoanhthu.Text = "0";
             // 
             // guna2Panel1
             // 
@@ -208,10 +197,34 @@ namespace AppDrink.GUI
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1049, 82);
-            this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.TabIndex = 4;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.Animated = true;
+            this.btnXoa.CheckedState.Parent = this.btnXoa;
+            this.btnXoa.CustomImages.Parent = this.btnXoa;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.DisabledState.Parent = this.btnXoa;
+            this.btnXoa.FillColor = System.Drawing.Color.Crimson;
+            this.btnXoa.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.HoverState.Parent = this.btnXoa;
+            this.btnXoa.Location = new System.Drawing.Point(746, 15);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
+            this.btnXoa.Size = new System.Drawing.Size(86, 45);
+            this.btnXoa.TabIndex = 8;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // toDate
             // 
+            this.toDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.toDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.toDate.Location = new System.Drawing.Point(493, 30);
             this.toDate.Name = "toDate";
@@ -220,6 +233,7 @@ namespace AppDrink.GUI
             // 
             // fromDate
             // 
+            this.fromDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromDate.Location = new System.Drawing.Point(281, 30);
             this.fromDate.Name = "fromDate";
@@ -271,41 +285,16 @@ namespace AppDrink.GUI
             this.btnThongke.Text = "Xem";
             this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.Animated = true;
-            this.btnXoa.CheckedState.Parent = this.btnXoa;
-            this.btnXoa.CustomImages.Parent = this.btnXoa;
-            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoa.DisabledState.Parent = this.btnXoa;
-            this.btnXoa.FillColor = System.Drawing.Color.Crimson;
-            this.btnXoa.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.HoverState.Parent = this.btnXoa;
-            this.btnXoa.Location = new System.Drawing.Point(746, 15);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(86, 45);
-            this.btnXoa.TabIndex = 8;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
             // FormThongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 620);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormThongke";
             this.Text = "Thống kê doanh thu";
-            this.guna2Panel2.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgThongke)).EndInit();
@@ -316,21 +305,21 @@ namespace AppDrink.GUI
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgThongke;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btnXoa;
+        private System.Windows.Forms.DateTimePicker toDate;
+        private System.Windows.Forms.DateTimePicker fromDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnThongke;
+        private System.Windows.Forms.Label lblDoanhthu;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2DataGridView dgThongke;
         private System.Windows.Forms.DataGridViewTextBoxColumn Idhd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;
         private System.Windows.Forms.DataGridViewTextBoxColumn money;
         private System.Windows.Forms.DataGridViewTextBoxColumn nguoilap;
-        private System.Windows.Forms.Label lblDoanhthu;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker toDate;
-        private System.Windows.Forms.DateTimePicker fromDate;
-        private Guna.UI2.WinForms.Guna2Button btnXoa;
     }
 }

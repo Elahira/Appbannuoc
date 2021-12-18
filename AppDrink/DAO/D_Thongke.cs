@@ -46,5 +46,23 @@ namespace AppDrink.DAO
             }
             return dshd;
         }
+
+        public List<ChiTiethd> GetCtHoadon(int mahd)
+        {
+            List<ChiTiethd> cthd = new List<ChiTiethd>();
+            var ds = from ct in db.ChiTiethd
+                     join nc in db.NuocUong on ct.IdNuoc equals nc.IdNuoc
+                     where ct.IdHoadon == mahd
+                     select new { ct.NuocUong, ct.Soluong, ct.Thanhtien };
+            foreach (var i in ds)
+            {
+                ChiTiethd ct = new ChiTiethd();
+                ct.Tennuoc = i.NuocUong.TenNuoc;
+                ct.Soluong = i.Soluong;
+                ct.Thanhtien = i.Thanhtien;
+                cthd.Add(ct);
+            }
+            return cthd;
+        }
     }
 }

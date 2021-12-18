@@ -22,5 +22,6 @@ namespace AppDrink
     
         public virtual HoaDon HoaDon { get; set; }
         public virtual NuocUong NuocUong { get; set; }
+        public string Tennuoc { get; internal set; }
     }
 }
