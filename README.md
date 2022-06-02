@@ -1,6 +1,6 @@
 # Appbannuoc
 
-Vào sql server và tạo database tên là: AppNgoaiNgu
+Vào sql server và tạo database tên là: Appbannuoc
 
 Sau đó chạy file SQLdata.sql để tạo table và đổ dữ liệu vào
 
